@@ -16,8 +16,6 @@ from selenium.webdriver.chrome.service import Service
 from faker import Faker
 import random
 
-import logging
-
 class Category(BasePage,unittest.TestCase):
     """
     Login common module for all user roles.
