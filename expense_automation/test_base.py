@@ -56,7 +56,9 @@ class TestBase(unittest.TestCase):
             
             cls.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
             cls.driver.get(config['expense']['TEST_URL'])
-            cls.driver.maximize_window()
+            # cls.driver.maximize_window()  # ❌ remove or comment this
+            cls.driver.set_window_size(1920, 1080)  # ✅ explicitly set size
+
             cls.driver.implicitly_wait(10)
             
             cls.logger.info(f"Browser initialized and navigated to {config['expense']['TEST_URL']}")
