@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-07-08 11:45:50</p>
+                <p class='attribute'><strong>Duration: </strong>184.86 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 14, Pass: 2, Fail: 12</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.SanityTests</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug10_snackbar_expense_edit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar not found or message incorrect after expense edit.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 550, in test_snackbar_expense_edit
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense updated successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 88, in bug10_snackbar_expense_edit
+    self.expenses.test_snackbar_expense_edit()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 558, in test_snackbar_expense_edit
+    self.fail("Snackbar not found or message incorrect after expense edit.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar not found or message incorrect after expense edit.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug11_expense_edit_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Expense deletion failed or snackbar not found after edit.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 569, in test_expense_edit_delete
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense deleted successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 92, in bug11_expense_edit_delete
+    self.expenses.test_expense_edit_delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 577, in test_expense_edit_delete
+    self.fail("Expense deletion failed or snackbar not found after edit.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Expense deletion failed or snackbar not found after edit.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug12_snackbar_expense_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar not found or message incorrect after expense deletion.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 600, in snackbar_expense_delete
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense deleted successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 97, in bug12_snackbar_expense_delete
+    self.expenses.snackbar_expense_delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 608, in snackbar_expense_delete
+    self.fail("Snackbar not found or message incorrect after expense deletion.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar not found or message incorrect after expense deletion.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug1_invalid_category_adding</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Category is  not shown Error message on Invalid Name.
+</p><p style="color:maroon;">AssertionError: Category was saved with invalid name. Expected an error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 48, in bug1_invalid_category_adding
+    self.configu.test_invalid_category_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 102, in test_invalid_category_name
+    self.fail("Category was saved with invalid name. Expected an error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Category was saved with invalid name. Expected an error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug2_category_edit_snackbar</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar message not displayed after Editing category.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 292, in snackbar_edit_category
+    toast = WebDriverWait(self.driver, 5).until(
+        EC.visibility_of_element_located(toast_locator)
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 53, in bug2_category_edit_snackbar
+    self.configu.snackbar_edit_category()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 306, in snackbar_edit_category
+    self.fail("Snackbar message not displayed after Editing category.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar message not displayed after Editing category.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug3_required_msg_on_whitespace</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[INFO] Save button not found — maybe validation did not work or page navigated.
+[INFO] Code link not visible — possible validation failure or page issue.
+[WARNING] Neither Save button nor Code link found. Trying JS-based back navigation...
+[INFO] JS navigation complete. Current URL: https://dev.mehainfotech.com/expense-manager/SubCategory
+[ERROR] JS navigation failed: the validation page not shown
+[INFO] Navigating directly to SubCategory list page as final fallback.
+</p><p style="color:maroon;">AssertionError: Failed to navigate back to SubCategory list page after whitespace-only name test.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 129, in test_whitespace_subcategory_name
+    self.fail("the validation page not shown")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: the validation page not shown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 57, in bug3_required_msg_on_whitespace
+    self.subconfigu.test_whitespace_subcategory_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 134, in test_whitespace_subcategory_name
+    self.fail("Failed to navigate back to SubCategory list page after whitespace-only name test.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Failed to navigate back to SubCategory list page after whitespace-only name test.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug4_invalid_subcategory_adding</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>SubCategory is  not shown Error message on Invalid Name.
+</p><p style="color:maroon;">AssertionError: Category was saved with invalid name. Expected an error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 62, in bug4_invalid_subcategory_adding
+    self.subconfigu.test_invalid_subcategory_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 152, in test_invalid_subcategory_name
+    self.fail("Category was saved with invalid name. Expected an error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Category was saved with invalid name. Expected an error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug5_subcategory_edit_snackbar</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar message not displayed after Editing subcategory.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 323, in snackbar_edit_subcategory
+    toast = WebDriverWait(self.driver, 5).until(
+        EC.visibility_of_element_located(toast_locator)
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 66, in bug5_subcategory_edit_snackbar
+    self.subconfigu.snackbar_edit_subcategory()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 337, in snackbar_edit_subcategory
+    self.fail("Snackbar message not displayed after Editing subcategory.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar message not displayed after Editing subcategory.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug6_expense_income_invalid_file_upload</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p><p style="color:maroon;">AssertionError: Invalid file upload did not show expected error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 167, in test_income_file_upload_invalid_type_add
+    error = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(),'invalid file')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 71, in bug6_expense_income_invalid_file_upload
+    self.expenses.test_income_file_upload_invalid_type_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 174, in test_income_file_upload_invalid_type_add
+    self.fail("Invalid file upload did not show expected error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid file upload did not show expected error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug7_expense_expense_invalid_file_upload</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p><p style="color:maroon;">AssertionError: Invalid file upload incorrectly triggered a success message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 75, in bug7_expense_expense_invalid_file_upload
+    self.expenses.test_expense_file_upload_invalid_type_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 354, in test_expense_file_upload_invalid_type_add
+    self.fail("Invalid file upload incorrectly triggered a success message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid file upload incorrectly triggered a success message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug8_expense_edit_empty_required_fields</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: There is no Mandatory Indication on expense configuration.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 506, in test_expense_edit_empty_required_fields
+    toast= WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(),'This field is required.')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 79, in bug8_expense_edit_empty_required_fields
+    self.expenses.test_expense_edit_empty_required_fields()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 514, in test_expense_edit_empty_required_fields
+    self.fail("There is no Mandatory Indication on expense configuration.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: There is no Mandatory Indication on expense configuration.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">bug9_expense_edit_invalid_amount</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Invalid amount format accepted and no error message shown.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 526, in test_expense_edit_invalid_amount
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Invalid amount format.')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\sanity_test.py", line 83, in bug9_expense_edit_invalid_amount
+    self.expenses.test_expense_edit_invalid_amount()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 534, in test_expense_edit_invalid_amount
+    self.fail("Invalid amount format accepted and no error message shown.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid amount format accepted and no error message shown.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">f_login_successful</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">logout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 14, Pass: 2, Fail: 12 -- Duration: 184.86 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

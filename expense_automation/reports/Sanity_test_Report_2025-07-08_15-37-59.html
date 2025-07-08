@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-07-08 15:37:59</p>
+                <p class='attribute'><strong>Duration: </strong>134.41 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 14, Pass: 1, Error: 13</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.SanityTests</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug10_snackbar_expense_edit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 87, in bug10_snackbar_expense_edit
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug11_expense_edit_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 91, in bug11_expense_edit_delete
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug12_snackbar_expense_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 96, in bug12_snackbar_expense_delete
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug1_invalid_category_adding</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AttributeError: 'NoneType' object has no attribute 'is_displayed'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 48, in bug1_invalid_category_adding
+    self.configu.test_invalid_category_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\category.py", line 91, in test_invalid_category_name
+    self.enter_text(Locators.CATEGORY_NAME_INPUT, category_name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 36, in enter_text
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(text)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 272, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug2_category_edit_snackbar</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 52, in bug2_category_edit_snackbar
+    self.configu.cat_tab()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\category.py", line 34, in cat_tab
+    self.click(Locators.CATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug3_required_msg_on_whitespace</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 56, in bug3_required_msg_on_whitespace
+    self.subconfigu.sub_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\subcategory.py", line 35, in sub_tab
+    self.click(Locators.SUBCATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug4_invalid_subcategory_adding</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 61, in bug4_invalid_subcategory_adding
+    self.subconfigu.sub_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\subcategory.py", line 35, in sub_tab
+    self.click(Locators.SUBCATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug5_subcategory_edit_snackbar</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 65, in bug5_subcategory_edit_snackbar
+    self.subconfigu.sub_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\subcategory.py", line 35, in sub_tab
+    self.click(Locators.SUBCATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug6_expense_income_invalid_file_upload</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 70, in bug6_expense_income_invalid_file_upload
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug7_expense_expense_invalid_file_upload</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 74, in bug7_expense_expense_invalid_file_upload
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug8_expense_edit_empty_required_fields</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 78, in bug8_expense_edit_empty_required_fields
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">bug9_expense_edit_invalid_amount</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 82, in bug9_expense_edit_invalid_amount
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">f_login_successful</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">logout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense_automation\sanity_test.py", line 103, in logout
+    self.out.logout()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\expense_testcases\authentication\logout.py", line 36, in logout
+    self.click(Locators.LOGOUT_BT)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x6e0fd9]
+	(No symbol) [0x0x775b9e]
+	(No symbol) [0x0x790159]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 14, Pass: 1, Error: 13 -- Duration: 134.41 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

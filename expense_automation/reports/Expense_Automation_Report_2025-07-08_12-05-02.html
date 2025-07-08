@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-07-08 12:05:02</p>
+                <p class='attribute'><strong>Duration: </strong>457.23 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 63, Pass: 46, Fail: 16, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.AllTests</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">b_login_invalid_password</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">c_login_invalid_username</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">d_login_without_password</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">e_login_without_username</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">f_login_successful</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">logout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_01_login_invalid_credentials</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Invalid credentials entered.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_02_category_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_03_create_new_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_04_empty_category_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_05_category_whitespace_only</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_06_invalid_category_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Category is  not shown Error message on Invalid Name.
+</p><p style="color:maroon;">AssertionError: Category was saved with invalid name. Expected an error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 78, in test_06_invalid_category_name
+    self.configu.test_invalid_category_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 102, in test_invalid_category_name
+    self.fail("Category was saved with invalid name. Expected an error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Category was saved with invalid name. Expected an error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_07_duplicate_category_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_08_long_category_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>ime
+ime
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_09_edit_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_10_edit_category_empty_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_11_edit_to_duplicate_category_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_12_delete_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[WARNING] Toast not found in WebDriverWait, checking page source...
+[INFO] Toast message found in page source!
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_13_category_snackbar_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Category created successfully! snackbar msg
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_14_category_snackbar_edit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar message not displayed after Editing category.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 292, in snackbar_edit_category
+    toast = WebDriverWait(self.driver, 5).until(
+        EC.visibility_of_element_located(toast_locator)
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 102, in test_14_category_snackbar_edit
+    self.configu.snackbar_edit_category()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 306, in snackbar_edit_category
+    self.fail("Snackbar message not displayed after Editing category.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar message not displayed after Editing category.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_15_subcategory_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_16_create_new_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_17_empty_subcategory_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_18_whitespace_subcategory_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[INFO] Save button not found — maybe validation did not work or page navigated.
+[INFO] Code link not visible — possible validation failure or page issue.
+[WARNING] Neither Save button nor Code link found. Trying JS-based back navigation...
+[INFO] JS navigation complete. Current URL: https://dev.mehainfotech.com/expense-manager/SubCategory
+[ERROR] JS navigation failed: the validation page not shown
+[INFO] Navigating directly to SubCategory list page as final fallback.
+</p><p style="color:maroon;">AssertionError: Failed to navigate back to SubCategory list page after whitespace-only name test.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 129, in test_whitespace_subcategory_name
+    self.fail("the validation page not shown")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: the validation page not shown
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 114, in test_18_whitespace_subcategory_name
+    self.subconfigu.test_whitespace_subcategory_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 134, in test_whitespace_subcategory_name
+    self.fail("Failed to navigate back to SubCategory list page after whitespace-only name test.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Failed to navigate back to SubCategory list page after whitespace-only name test.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_19_invalid_subcategory_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>SubCategory is  not shown Error message on Invalid Name.
+</p><p style="color:maroon;">AssertionError: Category was saved with invalid name. Expected an error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 117, in test_19_invalid_subcategory_name
+    self.subconfigu.test_invalid_subcategory_name()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 152, in test_invalid_subcategory_name
+    self.fail("Category was saved with invalid name. Expected an error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Category was saved with invalid name. Expected an error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_20_duplicate_subcategory_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_21_subcategory_without_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_22_long_subcategory_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_23_edit_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_24_edit_subcategory_empty_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_25_delete_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Subcategory "UpdatedSubCat 975" deleted successfully. deleted msg
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_26_subcategory_snackbar_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Subcategory created successfully! snackbar msg
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_27_subcategory_snackbar_edit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar message not displayed after Editing subcategory.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 323, in snackbar_edit_subcategory
+    toast = WebDriverWait(self.driver, 5).until(
+        EC.visibility_of_element_located(toast_locator)
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 141, in test_27_subcategory_snackbar_edit
+    self.subconfigu.snackbar_edit_subcategory()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 337, in snackbar_edit_subcategory
+    self.fail("Snackbar message not displayed after Editing subcategory.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar message not displayed after Editing subcategory.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_28_expense_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_29_expense_search</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_30_add_income</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_31_income_empty_required_fields_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_32_income_file_upload_invalid_type_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p><p style="color:maroon;">AssertionError: Invalid file upload did not show expected error message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 167, in test_income_file_upload_invalid_type_add
+    error = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(),'invalid file')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 156, in test_32_income_file_upload_invalid_type_add
+    self.expenses.test_income_file_upload_invalid_type_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 174, in test_income_file_upload_invalid_type_add
+    self.fail("Invalid file upload did not show expected error message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid file upload did not show expected error message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_33_income_snackbar_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Income saved successfully! snackbar msg
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_34_income_invalid_date_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_35_valid_expense_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_36_expense_empty_required_fields_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_37_expense_file_upload_invalid_type_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Found file inputs: 1
+0: id=, name=file
+</p><p style="color:maroon;">AssertionError: Invalid file upload incorrectly triggered a success message.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 171, in test_37_expense_file_upload_invalid_type_add
+    self.expenses.test_expense_file_upload_invalid_type_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 354, in test_expense_file_upload_invalid_type_add
+    self.fail("Invalid file upload incorrectly triggered a success message.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid file upload incorrectly triggered a success message.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_38_expense_snackbar_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Expense saved successfully! snackbar msg
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_39_expense_invalid_date_add</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Invalid date test
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_40_edit_expense</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Expense not updated or toast not shown.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 458, in test_expense_edit
+    toast = WebDriverWait(self.driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense updated successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 180, in test_40_edit_expense
+    self.expenses.test_expense_edit()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 465, in test_expense_edit
+    self.fail("Expense not updated or toast not shown.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Expense not updated or toast not shown.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_41_expense_edit_empty_required_fields</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: There is no Mandatory Indication on expense configuration.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 506, in test_expense_edit_empty_required_fields
+    toast= WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(),'This field is required.')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 183, in test_41_expense_edit_empty_required_fields
+    self.expenses.test_expense_edit_empty_required_fields()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 514, in test_expense_edit_empty_required_fields
+    self.fail("There is no Mandatory Indication on expense configuration.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: There is no Mandatory Indication on expense configuration.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_42_expense_edit_invalid_amount</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Invalid amount format accepted and no error message shown.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 526, in test_expense_edit_invalid_amount
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Invalid amount format.')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 186, in test_42_expense_edit_invalid_amount
+    self.expenses.test_expense_edit_invalid_amount()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 534, in test_expense_edit_invalid_amount
+    self.fail("Invalid amount format accepted and no error message shown.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Invalid amount format accepted and no error message shown.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_43_snackbar_expense_edit</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar not found or message incorrect after expense edit.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 550, in test_snackbar_expense_edit
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense updated successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 189, in test_43_snackbar_expense_edit
+    self.expenses.test_snackbar_expense_edit()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 558, in test_snackbar_expense_edit
+    self.fail("Snackbar not found or message incorrect after expense edit.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar not found or message incorrect after expense edit.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_44_expense_edit_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Expense deletion failed or snackbar not found after edit.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 569, in test_expense_edit_delete
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense deleted successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 192, in test_44_expense_edit_delete
+    self.expenses.test_expense_edit_delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 577, in test_expense_edit_delete
+    self.fail("Expense deletion failed or snackbar not found after edit.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Expense deletion failed or snackbar not found after edit.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_45_expense_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_46_snackbar_expense_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Snackbar not found or message incorrect after expense deletion.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 600, in snackbar_expense_delete
+    toast = WebDriverWait(self.driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense deleted successfully!')]"))
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 198, in test_46_snackbar_expense_delete
+    self.expenses.snackbar_expense_delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 608, in snackbar_expense_delete
+    self.fail("Snackbar not found or message incorrect after expense deletion.")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Snackbar not found or message incorrect after expense deletion.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_47_expense_report</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_48_filter_by_month_and_year</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 43, in test_02_filter_by_month_and_year
+    result = self.driver.find_element(By.XPATH, "(//td[contains(text(),'01-07-2025')])[1]")
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 204, in test_48_filter_by_month_and_year
+    self.expreport.test_02_filter_by_month_and_year()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 47, in test_02_filter_by_month_and_year
+    self.fail(f"Test failed due to exception: {e}")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_49_filter_by_date_range</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 54, in test_03_filter_by_date_range
+    result = self.driver.find_element(By.XPATH, "(//td[contains(text(),'01-07-2025')])[1]")
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 207, in test_49_filter_by_date_range
+    self.expreport.test_03_filter_by_date_range()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 58, in test_03_filter_by_date_range
+    self.fail(f"Test failed due to exception: {e}")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_50_export_expense_to_excel</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_51_category_ledger</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">UnexpectedAlertPresentException: Alert Text: No subcategory data found.
+Message: unexpected alert open: {Alert text : No subcategory data found.}
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x931130]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 213, in test_51_category_ledger
+    self.category_ledger.catledg_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 46, in catledg_tab
+    self.click(Locators.CATEGORY_WISE_LEDGER_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 231, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: No subcategory data found.
+Message: unexpected alert open: {Alert text : No subcategory data found.}
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x931130]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_52_filter_category_ledger_by_date</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 59, in test_filter_by_date
+    result = self.driver.find_element(By.XPATH, "(//td[contains(text(),'01-07-2025')])[1]")
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\all_tests.py", line 216, in test_52_filter_category_ledger_by_date
+    self.category_ledger.test_filter_by_date()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 63, in test_filter_by_date
+    self.fail(f"Test failed due to exception: {e}")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Test failed due to exception: Message: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(text(),'01-07-2025')])[1]"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_53_totals_calculation</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_54_export_category_ledger_to_excel</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_dashboard_amounts_displayed</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[DEBUG] Income text: ₹ 8,60,014
+[DEBUG] Expense text: ₹ 89,000
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_dashboard_balance_calculation</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[DEBUG] Raw values:
+Income: ₹ 8,60,014
+Expense: ₹ 89,000
+Balance: ₹ 7,71,014
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_dashboard_balance_non_negative</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>[DEBUG] Balance text: ₹ 7,71,014
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 63, Pass: 46, Fail: 16, Error: 1 -- Duration: 457.23 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

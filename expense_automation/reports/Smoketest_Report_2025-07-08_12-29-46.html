@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-07-08 12:29:46</p>
+                <p class='attribute'><strong>Duration: </strong>38.02 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 20, Pass: 0, Fail: 1, Error: 19</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.SmokeTests</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">f_login_successful</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 47, in f_login_successful
+    self.login.f_login_successful()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\authentication\login.py", line 128, in f_login_successful
+    self.clear(Locators.EMAIL_INPUT)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 98, in clear
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(Keys.CONTROL + "a" + Keys.DELETE)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">logout</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 124, in logout
+    self.out.logout()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\authentication\logout.py", line 36, in logout
+    self.click(Locators.LOGOUT_BT)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_02_category_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 55, in test_02_category_tab
+    self.configu.cat_tab()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 34, in cat_tab
+    self.click(Locators.CATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_03_create_new_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8920c0]
+	(No symbol) [0x0x892046]
+	(No symbol) [0x0x890963]
+	(No symbol) [0x0x89162d]
+	(No symbol) [0x0x8a6cc7]
+	(No symbol) [0x0x8a745b]
+	(No symbol) [0x0x8aac7a]
+	(No symbol) [0x0x8aacf7]
+	(No symbol) [0x0x8ea194]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 59, in test_03_create_new_category
+    self.configu.test_create_new_category()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 38, in test_create_new_category
+    self.click(Locators.NEW_CATEGORY_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8920c0]
+	(No symbol) [0x0x892046]
+	(No symbol) [0x0x890963]
+	(No symbol) [0x0x89162d]
+	(No symbol) [0x0x8a6cc7]
+	(No symbol) [0x0x8a745b]
+	(No symbol) [0x0x8aac7a]
+	(No symbol) [0x0x8aacf7]
+	(No symbol) [0x0x8ea194]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_09_edit_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 63, in test_09_edit_category
+    self.configu.test_edit_category()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 165, in test_edit_category
+    self.click(Locators.EDIT_CATEGORY_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_12_delete_category</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 67, in test_12_delete_category
+    self.configu.delete_category_and_verify()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\category.py", line 216, in delete_category_and_verify
+    self.click(Locators.DELETE_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_15_subcategory_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 71, in test_15_subcategory_tab
+    self.subconfigu.sub_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 35, in sub_tab
+    self.click(Locators.SUBCATEGORY_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_16_create_new_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 75, in test_16_create_new_subcategory
+    self.subconfigu.test_create_new_subcategory()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 39, in test_create_new_subcategory
+    self.click(Locators.SUBCATEGORY_NEW_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_23_edit_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 79, in test_23_edit_subcategory
+    self.subconfigu.test_edit_subcategory()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 221, in test_edit_subcategory
+    self.click(Locators.SUBCATEGORY_EDIT_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_25_delete_subcategory</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 83, in test_25_delete_subcategory
+    self.subconfigu.test_delete_subcategory()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\subcategory.py", line 260, in test_delete_subcategory
+    self.click(Locators.SUBCATEGORY_DELETE_BUTTON)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_28_expense_tab</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 87, in test_28_expense_tab
+    self.expenses.expense_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 38, in expense_tab
+    self.click(Locators.EXPENSE_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_30_add_income</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 91, in test_30_add_income
+    self.expenses.test_valid_income_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 57, in test_valid_income_add
+    self.click(Locators.EXPENSES_ADD_INCOME_BT)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_40_edit_expense</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 99, in test_40_edit_expense
+    self.expenses.test_expense_edit()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 441, in test_expense_edit
+    self.click(Locators.EXPENSES_EXPENSE_BACK)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_45_expense_delete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 103, in test_45_expense_delete
+    self.expenses.test_expense_delete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 580, in test_expense_delete
+    self.click(Locators.EXPENSE_DELETE)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_47_expense_report</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 107, in test_47_expense_report
+    self.expreport.exprep_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 35, in exprep_tab
+    self.click(Locators.EXPENSES_REPORT_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_50_export_expense_to_excel</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 111, in test_50_export_expense_to_excel
+    self.expreport.test_03_filter_by_date_range()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expense_report.py", line 49, in test_03_filter_by_date_range
+    self.enter_text(Locators.EXPENSES_REPORT_START_DATE, "01-07-2025")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 36, in enter_text
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(text)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_51_category_ledger</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 116, in test_51_category_ledger
+    self.category_ledger.catledg_tab()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 46, in catledg_tab
+    self.click(Locators.CATEGORY_WISE_LEDGER_SIDEBAR)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_54_export_category_ledger_to_excel</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 72, in test_export_to_excel
+    excel_button = WebDriverWait(self.driver, 10).until(
+        EC.element_to_be_clickable(Locators.CATEGORY_WISE_LEDGER_EXCEL_BUTTON)
+    )
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 624, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 120, in test_54_export_category_ledger_to_excel
+    self.category_ledger.test_export_to_excel()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\categorywiseledger.py", line 103, in test_export_to_excel
+    self.driver.save_screenshot("export_excel_fail.png")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1021, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 996, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1030, in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1040, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_add_expense</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 95, in test_add_expense
+    self.expenses.test_valid_expense_add()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\expenses.py", line 244, in test_valid_expense_add
+    self.click(Locators.EXPENSES_INCOME_BACK)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\base.py", line 27, in click
+    return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).click()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 217, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a1f90]
+	(No symbol) [0x0x8ddb48]
+	(No symbol) [0x0x90f326]
+	(No symbol) [0x0x90af15]
+	(No symbol) [0x0x90a496]
+	(No symbol) [0x0x873a45]
+	(No symbol) [0x0x873f9e]
+	(No symbol) [0x0x87442d]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	(No symbol) [0x0x873710]
+	(No symbol) [0x0x872f1d]
+	GetHandleVerifier [0x0xe08b8c+3881484]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_dashboard_amounts_displayed</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: Test failed due to: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//h4[contains(text(),'Income')]/following-sibling::h2"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\dashboard.py", line 62, in test_dashboard_amounts_displayed
+    income_text = self.driver.find_element(By.XPATH, "//h4[contains(text(),'Income')]/following-sibling::h2").text
+                  ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 922, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\expense\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//h4[contains(text(),'Income')]/following-sibling::h2"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\smoke_test.py", line 51, in test_dashboard_amounts_displayed
+    self.dash.test_dashboard_amounts_displayed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\expense\expense\expense\expense_automation\expense_testcases\dashboard.py", line 74, in test_dashboard_amounts_displayed
+    self.fail(f"Test failed due to: {e}")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\unittest\case.py", line 732, in fail
+    raise self.failureException(msg)
+AssertionError: Test failed due to: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//h4[contains(text(),'Income')]/following-sibling::h2"}
+  (Session info: chrome=138.0.7204.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+	GetHandleVerifier [0x0xa64553+62419]
+	GetHandleVerifier [0x0xa64594+62484]
+	(No symbol) [0x0x8a2133]
+	(No symbol) [0x0x8ea8fe]
+	(No symbol) [0x0x8eac9b]
+	(No symbol) [0x0x933052]
+	(No symbol) [0x0x90f4b4]
+	(No symbol) [0x0x93087a]
+	(No symbol) [0x0x90f266]
+	(No symbol) [0x0x8de852]
+	(No symbol) [0x0x8df6f4]
+	GetHandleVerifier [0x0xcd4833+2619059]
+	GetHandleVerifier [0x0xccfc4a+2599626]
+	GetHandleVerifier [0x0xa8b0fa+221050]
+	GetHandleVerifier [0x0xa7b378+156152]
+	GetHandleVerifier [0x0xa81d2d+183213]
+	GetHandleVerifier [0x0xa6c438+94904]
+	GetHandleVerifier [0x0xa6c5c2+95298]
+	GetHandleVerifier [0x0xa5771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 20, Pass: 0, Fail: 1, Error: 19 -- Duration: 38.02 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
