@@ -80,7 +80,7 @@ class Expenses(BasePage,unittest.TestCase):
                 arguments[0].style.opacity = 1;
             """, file_input)
 
-            file_path = r"C:\Users\admin\Downloads\expense\expense\expense\expense_automation\screenshot.png"
+            file_path = r"../expense_automation/screenshot.png"
             file_input.send_keys(file_path)
 
 
