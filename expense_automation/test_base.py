@@ -1,5 +1,6 @@
 import unittest
 import os
+import uuid
 import configparser
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -42,7 +43,10 @@ class TestBase(unittest.TestCase):
             # Use webdriver-manager to fetch the correct driver
             chrome_service = Service(ChromeDriverManager().install())
             chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument(f"--user-data-dir={tempfile.mkdtemp()}")
+
+            unique_profile = os.path.join(tempfile.gettempdir(), f"profile-{uuid.uuid4()}")
+            chrome_options.add_argument(f"--user-data-dir={unique_profile}")
+            chrome_options.add_argument("--remote-debugging-port=0")
 
             
             # Add options for better stability
