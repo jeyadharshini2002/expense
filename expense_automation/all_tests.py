@@ -353,5 +353,6 @@ if __name__ == "__main__":
         success_rate = ((result.testsRun - len(result.failures) - len(result.errors)) / result.testsRun) * 100
         print(f"[DEBUG] Success rate: {success_rate:.1f}%")
     else:
-        print("[DEBUG] No tests were run. Success rate: 0%")
+        print("[DEBUG] No tests were run. Success rate: 0.0%")
+
 
