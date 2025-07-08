@@ -5,6 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from logger_file import get_logger
+import tempfile
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import tempfile
 
 # Load config
 config = configparser.ConfigParser()
@@ -38,8 +42,12 @@ class TestBase(unittest.TestCase):
             # Use webdriver-manager to fetch the correct driver
             chrome_service = Service(ChromeDriverManager().install())
             chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument(f"--user-data-dir={tempfile.mkdtemp()}")
+
             
             # Add options for better stability
+            chrome_options.add_argument("--headless=new")
+
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-popup-blocking")
             chrome_options.add_argument("--disable-notifications")
