@@ -14,7 +14,6 @@ config.read(settings_path)
 if 'expense' not in config:
     raise ValueError("Missing 'expense' section in settings.conf!")
 
-
 class TestBase(unittest.TestCase):
     """
     Base test class using WebDriverManager to automatically manage ChromeDriver.

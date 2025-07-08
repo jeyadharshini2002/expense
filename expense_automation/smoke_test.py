@@ -144,35 +144,35 @@ if __name__ == "__main__":
     suite.addTest(SmokeTests('test_dashboard_amounts_displayed'))
 
     
-    # suite.addTest(SmokeTests('test_02_category_tab'))
-    # suite.addTest(SmokeTests('test_03_create_new_category'))
-    # suite.addTest(SmokeTests('test_09_edit_category'))
-    # suite.addTest(SmokeTests('test_12_delete_category'))
+    suite.addTest(SmokeTests('test_02_category_tab'))
+    suite.addTest(SmokeTests('test_03_create_new_category'))
+    suite.addTest(SmokeTests('test_09_edit_category'))
+    suite.addTest(SmokeTests('test_12_delete_category'))
 
 
 
-    # suite.addTest(SmokeTests('test_15_subcategory_tab'))
-    # suite.addTest(SmokeTests('test_16_create_new_subcategory'))
-    # suite.addTest(SmokeTests('test_23_edit_subcategory'))
-    # suite.addTest(SmokeTests('test_25_delete_subcategory'))
+    suite.addTest(SmokeTests('test_15_subcategory_tab'))
+    suite.addTest(SmokeTests('test_16_create_new_subcategory'))
+    suite.addTest(SmokeTests('test_23_edit_subcategory'))
+    suite.addTest(SmokeTests('test_25_delete_subcategory'))
 
 
 
-    # suite.addTest(SmokeTests('test_28_expense_tab'))
-    # suite.addTest(SmokeTests('test_30_add_income'))
-    # suite.addTest(SmokeTests('test_add_expense'))
-    # suite.addTest(SmokeTests('test_40_edit_expense'))
-    # suite.addTest(SmokeTests('test_45_expense_delete'))
+    suite.addTest(SmokeTests('test_28_expense_tab'))
+    suite.addTest(SmokeTests('test_30_add_income'))
+    suite.addTest(SmokeTests('test_add_expense'))
+    suite.addTest(SmokeTests('test_40_edit_expense'))
+    suite.addTest(SmokeTests('test_45_expense_delete'))
 
 
 
-    # suite.addTest(SmokeTests('test_47_expense_report'))
-    # suite.addTest(SmokeTests('test_50_export_expense_to_excel'))
+    suite.addTest(SmokeTests('test_47_expense_report'))
+    suite.addTest(SmokeTests('test_50_export_expense_to_excel'))
 
 
-    # suite.addTest(SmokeTests('test_51_category_ledger'))
-    # suite.addTest(SmokeTests('test_54_export_category_ledger_to_excel'))
-    # suite.addTest(SmokeTests('logout'))
+    suite.addTest(SmokeTests('test_51_category_ledger'))
+    suite.addTest(SmokeTests('test_54_export_category_ledger_to_excel'))
+    suite.addTest(SmokeTests('logout'))
 
 
     # Run tests with HTML report
