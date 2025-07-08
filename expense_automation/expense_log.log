@@ -15124,3 +15124,236 @@ Date and Time: 08-Jul-25 03:49:31 PM - INFO - Logout - Line number: 34 : Perform
 Date and Time: 08-Jul-25 03:49:31 PM - INFO - AllTests.logout - Line number: 91 : Completed test: logout
 Date and Time: 08-Jul-25 03:49:31 PM - INFO - AllTests - Line number: 68 : Closing browser after all tests completed
 Date and Time: 08-Jul-25 03:49:33 PM - INFO - AllTests - Line number: 70 : Browser closed and driver quit successfully
+Date and Time: 08-Jul-25 04:06:38 PM - INFO - AllTests - Line number: 32 : Setting up Chrome driver for all tests
+Date and Time: 08-Jul-25 04:06:43 PM - INFO - AllTests - Line number: 55 : Browser initialized and navigated to https://dev.mehainfotech.com/expense-manager
+Date and Time: 08-Jul-25 04:06:43 PM - INFO - AllTests.test_01_login_invalid_credentials - Line number: 85 : Starting test: test_01_login_invalid_credentials
+Date and Time: 08-Jul-25 04:06:53 PM - WARNING - LoginPage - Line number: 44 : Invalid credentials entered.
+Date and Time: 08-Jul-25 04:06:53 PM - INFO - AllTests.test_01_login_invalid_credentials - Line number: 91 : Completed test: test_01_login_invalid_credentials
+Date and Time: 08-Jul-25 04:06:53 PM - INFO - AllTests.b_login_invalid_password - Line number: 85 : Starting test: b_login_invalid_password
+Date and Time: 08-Jul-25 04:06:56 PM - WARNING - LoginPage - Line number: 65 : Invalid password entered.
+Date and Time: 08-Jul-25 04:06:56 PM - INFO - AllTests.b_login_invalid_password - Line number: 91 : Completed test: b_login_invalid_password
+Date and Time: 08-Jul-25 04:06:56 PM - INFO - AllTests.c_login_invalid_username - Line number: 85 : Starting test: c_login_invalid_username
+Date and Time: 08-Jul-25 04:06:59 PM - WARNING - LoginPage - Line number: 85 : Invalid username entered.
+Date and Time: 08-Jul-25 04:06:59 PM - INFO - AllTests.c_login_invalid_username - Line number: 91 : Completed test: c_login_invalid_username
+Date and Time: 08-Jul-25 04:06:59 PM - INFO - AllTests.d_login_without_password - Line number: 85 : Starting test: d_login_without_password
+Date and Time: 08-Jul-25 04:07:03 PM - WARNING - LoginPage - Line number: 102 : Password not entered.
+Date and Time: 08-Jul-25 04:07:03 PM - INFO - AllTests.d_login_without_password - Line number: 91 : Completed test: d_login_without_password
+Date and Time: 08-Jul-25 04:07:03 PM - INFO - AllTests.e_login_without_username - Line number: 85 : Starting test: e_login_without_username
+Date and Time: 08-Jul-25 04:07:06 PM - WARNING - LoginPage - Line number: 119 : Username not entered.
+Date and Time: 08-Jul-25 04:07:06 PM - INFO - AllTests.e_login_without_username - Line number: 91 : Completed test: e_login_without_username
+Date and Time: 08-Jul-25 04:07:06 PM - INFO - AllTests.f_login_successful - Line number: 85 : Starting test: f_login_successful
+Date and Time: 08-Jul-25 04:07:13 PM - INFO - LoginPage - Line number: 138 : Login successful, no error message found.
+Date and Time: 08-Jul-25 04:07:13 PM - INFO - LoginPage - Line number: 144 : Login successful.
+Date and Time: 08-Jul-25 04:07:15 PM - INFO - AllTests.f_login_successful - Line number: 91 : Completed test: f_login_successful
+Date and Time: 08-Jul-25 04:07:15 PM - INFO - AllTests.test_dashboard_balance_calculation - Line number: 85 : Starting test: test_dashboard_balance_calculation
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_dashboard_balance_calculation - Line number: 91 : Completed test: test_dashboard_balance_calculation
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_dashboard_balance_non_negative - Line number: 85 : Starting test: test_dashboard_balance_non_negative
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_dashboard_balance_non_negative - Line number: 91 : Completed test: test_dashboard_balance_non_negative
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_dashboard_amounts_displayed - Line number: 85 : Starting test: test_dashboard_amounts_displayed
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_dashboard_amounts_displayed - Line number: 91 : Completed test: test_dashboard_amounts_displayed
+Date and Time: 08-Jul-25 04:07:16 PM - INFO - AllTests.test_02_category_tab - Line number: 85 : Starting test: test_02_category_tab
+Date and Time: 08-Jul-25 04:07:19 PM - INFO - AllTests.test_02_category_tab - Line number: 91 : Completed test: test_02_category_tab
+Date and Time: 08-Jul-25 04:07:19 PM - INFO - AllTests.test_03_create_new_category - Line number: 85 : Starting test: test_03_create_new_category
+Date and Time: 08-Jul-25 04:07:24 PM - INFO - Category - Line number: 50 : Category created successfully!
+Date and Time: 08-Jul-25 04:07:24 PM - INFO - AllTests.test_03_create_new_category - Line number: 91 : Completed test: test_03_create_new_category
+Date and Time: 08-Jul-25 04:07:25 PM - INFO - AllTests.test_04_empty_category_name - Line number: 85 : Starting test: test_04_empty_category_name
+Date and Time: 08-Jul-25 04:07:35 PM - WARNING - Category - Line number: 67 : Category is showing required message.
+Date and Time: 08-Jul-25 04:07:36 PM - INFO - AllTests.test_04_empty_category_name - Line number: 91 : Completed test: test_04_empty_category_name
+Date and Time: 08-Jul-25 04:07:36 PM - INFO - AllTests.test_05_category_whitespace_only - Line number: 85 : Starting test: test_05_category_whitespace_only
+Date and Time: 08-Jul-25 04:07:47 PM - WARNING - Category - Line number: 83 : Category is showing required message on white space.
+Date and Time: 08-Jul-25 04:07:48 PM - INFO - AllTests.test_05_category_whitespace_only - Line number: 91 : Completed test: test_05_category_whitespace_only
+Date and Time: 08-Jul-25 04:07:48 PM - INFO - AllTests.test_06_invalid_category_name - Line number: 85 : Starting test: test_06_invalid_category_name
+Date and Time: 08-Jul-25 04:07:53 PM - ERROR - Category - Line number: 98 : Category is  not shown Error message on Invalid Name.
+Date and Time: 08-Jul-25 04:07:53 PM - INFO - AllTests.test_06_invalid_category_name - Line number: 91 : Completed test: test_06_invalid_category_name
+Date and Time: 08-Jul-25 04:07:53 PM - INFO - AllTests.test_07_duplicate_category_name - Line number: 85 : Starting test: test_07_duplicate_category_name
+Date and Time: 08-Jul-25 04:08:06 PM - WARNING - Category - Line number: 128 : Allready Existing category is not adding Again, showing required message.
+Date and Time: 08-Jul-25 04:08:07 PM - INFO - AllTests.test_07_duplicate_category_name - Line number: 91 : Completed test: test_07_duplicate_category_name
+Date and Time: 08-Jul-25 04:08:07 PM - INFO - AllTests.test_08_long_category_name - Line number: 85 : Starting test: test_08_long_category_name
+Date and Time: 08-Jul-25 04:08:07 PM - INFO - Category - Line number: 135 : Testing with long category name of length 300
+Date and Time: 08-Jul-25 04:08:20 PM - WARNING - Category - Line number: 157 : Above 250 characters not accepted, exception raised or not found in table.
+Date and Time: 08-Jul-25 04:08:20 PM - DEBUG - Category - Line number: 158 : Exception details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x74a8fe]
+	(No symbol) [0x0x74ac9b]
+	(No symbol) [0x0x793052]
+	(No symbol) [0x0x76f4b4]
+	(No symbol) [0x0x79087a]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+Date and Time: 08-Jul-25 04:08:23 PM - INFO - AllTests.test_08_long_category_name - Line number: 91 : Completed test: test_08_long_category_name
+Date and Time: 08-Jul-25 04:08:23 PM - INFO - AllTests.test_09_edit_category - Line number: 85 : Starting test: test_09_edit_category
+Date and Time: 08-Jul-25 04:08:25 PM - INFO - Category - Line number: 175 : Category updated successfully.
+Date and Time: 08-Jul-25 04:08:25 PM - INFO - AllTests.test_09_edit_category - Line number: 91 : Completed test: test_09_edit_category
+Date and Time: 08-Jul-25 04:08:25 PM - INFO - AllTests.test_10_edit_category_empty_name - Line number: 85 : Starting test: test_10_edit_category_empty_name
+Date and Time: 08-Jul-25 04:08:36 PM - WARNING - Category - Line number: 194 : Category is showing required message.
+Date and Time: 08-Jul-25 04:08:37 PM - INFO - AllTests.test_10_edit_category_empty_name - Line number: 91 : Completed test: test_10_edit_category_empty_name
+Date and Time: 08-Jul-25 04:08:37 PM - INFO - AllTests.test_11_edit_to_duplicate_category_name - Line number: 85 : Starting test: test_11_edit_to_duplicate_category_name
+Date and Time: 08-Jul-25 04:08:48 PM - WARNING - Category - Line number: 213 : Allready Existing category is not adding Again, showing required message during Edit.
+Date and Time: 08-Jul-25 04:08:49 PM - INFO - AllTests.test_11_edit_to_duplicate_category_name - Line number: 91 : Completed test: test_11_edit_to_duplicate_category_name
+Date and Time: 08-Jul-25 04:08:49 PM - INFO - AllTests.test_12_delete_category - Line number: 85 : Starting test: test_12_delete_category
+Date and Time: 08-Jul-25 04:08:51 PM - INFO - Category - Line number: 240 : Toast message found in page source.
+Date and Time: 08-Jul-25 04:08:51 PM - INFO - AllTests.test_12_delete_category - Line number: 91 : Completed test: test_12_delete_category
+Date and Time: 08-Jul-25 04:08:51 PM - INFO - AllTests.test_13_category_snackbar_add - Line number: 85 : Starting test: test_13_category_snackbar_add
+Date and Time: 08-Jul-25 04:08:57 PM - INFO - Category - Line number: 262 : Snackbar message displayed: Category created successfully!
+Date and Time: 08-Jul-25 04:08:57 PM - INFO - AllTests.test_13_category_snackbar_add - Line number: 91 : Completed test: test_13_category_snackbar_add
+Date and Time: 08-Jul-25 04:08:57 PM - INFO - AllTests.test_14_category_snackbar_edit - Line number: 85 : Starting test: test_14_category_snackbar_edit
+Date and Time: 08-Jul-25 04:09:08 PM - ERROR - Category - Line number: 304 : Snackbar message not displayed after Updating category.
+Date and Time: 08-Jul-25 04:09:08 PM - INFO - AllTests.test_14_category_snackbar_edit - Line number: 91 : Completed test: test_14_category_snackbar_edit
+Date and Time: 08-Jul-25 04:09:08 PM - INFO - AllTests.test_15_subcategory_tab - Line number: 85 : Starting test: test_15_subcategory_tab
+Date and Time: 08-Jul-25 04:09:11 PM - INFO - AllTests.test_15_subcategory_tab - Line number: 91 : Completed test: test_15_subcategory_tab
+Date and Time: 08-Jul-25 04:09:11 PM - INFO - AllTests.test_16_create_new_subcategory - Line number: 85 : Starting test: test_16_create_new_subcategory
+Date and Time: 08-Jul-25 04:09:18 PM - INFO - Sub Category - Line number: 57 : SubCategory saved successfully.
+Date and Time: 08-Jul-25 04:09:18 PM - INFO - AllTests.test_16_create_new_subcategory - Line number: 91 : Completed test: test_16_create_new_subcategory
+Date and Time: 08-Jul-25 04:09:18 PM - INFO - AllTests.test_17_empty_subcategory_name - Line number: 85 : Starting test: test_17_empty_subcategory_name
+Date and Time: 08-Jul-25 04:09:31 PM - WARNING - Sub Category - Line number: 78 : SubCategory name is showing required message.
+Date and Time: 08-Jul-25 04:09:32 PM - INFO - AllTests.test_17_empty_subcategory_name - Line number: 91 : Completed test: test_17_empty_subcategory_name
+Date and Time: 08-Jul-25 04:09:32 PM - INFO - AllTests.test_18_whitespace_subcategory_name - Line number: 85 : Starting test: test_18_whitespace_subcategory_name
+Date and Time: 08-Jul-25 04:09:58 PM - INFO - AllTests.test_18_whitespace_subcategory_name - Line number: 91 : Completed test: test_18_whitespace_subcategory_name
+Date and Time: 08-Jul-25 04:09:58 PM - INFO - AllTests.test_19_invalid_subcategory_name - Line number: 85 : Starting test: test_19_invalid_subcategory_name
+Date and Time: 08-Jul-25 04:10:04 PM - ERROR - Sub Category - Line number: 151 : SubCategory is not shown Error message on Invalid Name.
+Date and Time: 08-Jul-25 04:10:04 PM - INFO - AllTests.test_19_invalid_subcategory_name - Line number: 91 : Completed test: test_19_invalid_subcategory_name
+Date and Time: 08-Jul-25 04:10:04 PM - INFO - AllTests.test_20_duplicate_subcategory_name - Line number: 85 : Starting test: test_20_duplicate_subcategory_name
+Date and Time: 08-Jul-25 04:10:16 PM - WARNING - Sub Category - Line number: 174 : SubCategory is showing required message on Duplicate Name.
+Date and Time: 08-Jul-25 04:10:17 PM - INFO - AllTests.test_20_duplicate_subcategory_name - Line number: 91 : Completed test: test_20_duplicate_subcategory_name
+Date and Time: 08-Jul-25 04:10:17 PM - INFO - AllTests.test_21_subcategory_without_category - Line number: 85 : Starting test: test_21_subcategory_without_category
+Date and Time: 08-Jul-25 04:10:29 PM - WARNING - Sub Category - Line number: 191 : SubCategory is showing required message when Category is not selected.
+Date and Time: 08-Jul-25 04:10:30 PM - INFO - AllTests.test_21_subcategory_without_category - Line number: 91 : Completed test: test_21_subcategory_without_category
+Date and Time: 08-Jul-25 04:10:30 PM - INFO - AllTests.test_22_long_subcategory_name - Line number: 85 : Starting test: test_22_long_subcategory_name
+Date and Time: 08-Jul-25 04:10:44 PM - WARNING - Sub Category - Line number: 213 : Above 250 characters not accepted, exception raised or not found in table.
+Date and Time: 08-Jul-25 04:10:44 PM - DEBUG - Sub Category - Line number: 214 : Exception details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x8c4553+62419]
+	GetHandleVerifier [0x0x8c4594+62484]
+	(No symbol) [0x0x702133]
+	(No symbol) [0x0x74a8fe]
+	(No symbol) [0x0x74ac9b]
+	(No symbol) [0x0x793052]
+	(No symbol) [0x0x76f4b4]
+	(No symbol) [0x0x79087a]
+	(No symbol) [0x0x76f266]
+	(No symbol) [0x0x73e852]
+	(No symbol) [0x0x73f6f4]
+	GetHandleVerifier [0x0xb34833+2619059]
+	GetHandleVerifier [0x0xb2fc4a+2599626]
+	GetHandleVerifier [0x0x8eb0fa+221050]
+	GetHandleVerifier [0x0x8db378+156152]
+	GetHandleVerifier [0x0x8e1d2d+183213]
+	GetHandleVerifier [0x0x8cc438+94904]
+	GetHandleVerifier [0x0x8cc5c2+95298]
+	GetHandleVerifier [0x0x8b771a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+Date and Time: 08-Jul-25 04:10:47 PM - INFO - AllTests.test_22_long_subcategory_name - Line number: 91 : Completed test: test_22_long_subcategory_name
+Date and Time: 08-Jul-25 04:10:47 PM - INFO - AllTests.test_23_edit_subcategory - Line number: 85 : Starting test: test_23_edit_subcategory
+Date and Time: 08-Jul-25 04:10:51 PM - INFO - Sub Category - Line number: 234 : SubCategory updated successfully.
+Date and Time: 08-Jul-25 04:10:51 PM - INFO - AllTests.test_23_edit_subcategory - Line number: 91 : Completed test: test_23_edit_subcategory
+Date and Time: 08-Jul-25 04:10:51 PM - INFO - AllTests.test_24_edit_subcategory_empty_name - Line number: 85 : Starting test: test_24_edit_subcategory_empty_name
+Date and Time: 08-Jul-25 04:11:03 PM - WARNING - Sub Category - Line number: 253 : SubCategory is showing required message on empty name.
+Date and Time: 08-Jul-25 04:11:04 PM - INFO - AllTests.test_24_edit_subcategory_empty_name - Line number: 91 : Completed test: test_24_edit_subcategory_empty_name
+Date and Time: 08-Jul-25 04:11:04 PM - INFO - AllTests.test_25_delete_subcategory - Line number: 85 : Starting test: test_25_delete_subcategory
+Date and Time: 08-Jul-25 04:11:06 PM - INFO - Sub Category - Line number: 263 : SubCategory delete button clicked.
+Date and Time: 08-Jul-25 04:11:06 PM - INFO - Sub Category - Line number: 270 : SubCategory deleted successfully: Toast appeared.
+Date and Time: 08-Jul-25 04:11:07 PM - INFO - AllTests.test_25_delete_subcategory - Line number: 91 : Completed test: test_25_delete_subcategory
+Date and Time: 08-Jul-25 04:11:07 PM - INFO - AllTests.test_26_subcategory_snackbar_add - Line number: 85 : Starting test: test_26_subcategory_snackbar_add
+Date and Time: 08-Jul-25 04:11:12 PM - INFO - Sub Category - Line number: 298 : Snackbar message displayed: Subcategory created successfully!
+Date and Time: 08-Jul-25 04:11:12 PM - INFO - AllTests.test_26_subcategory_snackbar_add - Line number: 91 : Completed test: test_26_subcategory_snackbar_add
+Date and Time: 08-Jul-25 04:11:12 PM - INFO - AllTests.test_27_subcategory_snackbar_edit - Line number: 85 : Starting test: test_27_subcategory_snackbar_edit
+Date and Time: 08-Jul-25 04:11:27 PM - ERROR - Sub Category - Line number: 335 : Snackbar message not displayed after Updating subcategory.
+Date and Time: 08-Jul-25 04:11:27 PM - INFO - AllTests.test_27_subcategory_snackbar_edit - Line number: 91 : Completed test: test_27_subcategory_snackbar_edit
+Date and Time: 08-Jul-25 04:11:27 PM - INFO - AllTests.test_28_expense_tab - Line number: 85 : Starting test: test_28_expense_tab
+Date and Time: 08-Jul-25 04:11:30 PM - INFO - AllTests.test_28_expense_tab - Line number: 91 : Completed test: test_28_expense_tab
+Date and Time: 08-Jul-25 04:11:30 PM - INFO - AllTests.test_29_expense_search - Line number: 85 : Starting test: test_29_expense_search
+Date and Time: 08-Jul-25 04:11:33 PM - INFO - Expenses - Line number: 50 : Search functionality working. 'WATER CAN' found in results.
+Date and Time: 08-Jul-25 04:11:33 PM - INFO - AllTests.test_29_expense_search - Line number: 91 : Completed test: test_29_expense_search
+Date and Time: 08-Jul-25 04:11:33 PM - INFO - AllTests.test_30_add_income - Line number: 85 : Starting test: test_30_add_income
+Date and Time: 08-Jul-25 04:11:37 PM - INFO - AllTests.test_30_add_income - Line number: 91 : Completed test: test_30_add_income
+Date and Time: 08-Jul-25 04:11:37 PM - INFO - AllTests.test_31_income_empty_required_fields_add - Line number: 85 : Starting test: test_31_income_empty_required_fields_add
+Date and Time: 08-Jul-25 04:11:40 PM - INFO - Expenses - Line number: 116 : Mandatory field validation message displayed correctly.
+Date and Time: 08-Jul-25 04:11:41 PM - INFO - AllTests.test_31_income_empty_required_fields_add - Line number: 91 : Completed test: test_31_income_empty_required_fields_add
+Date and Time: 08-Jul-25 04:11:41 PM - INFO - AllTests.test_32_income_file_upload_invalid_type_add - Line number: 85 : Starting test: test_32_income_file_upload_invalid_type_add
+Date and Time: 08-Jul-25 04:11:57 PM - WARNING - Expenses - Line number: 173 : No invalid file error message not displayed.
+Date and Time: 08-Jul-25 04:11:57 PM - INFO - AllTests.test_32_income_file_upload_invalid_type_add - Line number: 91 : Completed test: test_32_income_file_upload_invalid_type_add
+Date and Time: 08-Jul-25 04:11:57 PM - INFO - AllTests.test_33_income_snackbar_add - Line number: 85 : Starting test: test_33_income_snackbar_add
+Date and Time: 08-Jul-25 04:12:04 PM - INFO - Expenses - Line number: 205 : Snackbar message displayed: Income saved successfully!
+Date and Time: 08-Jul-25 04:12:05 PM - INFO - AllTests.test_33_income_snackbar_add - Line number: 91 : Completed test: test_33_income_snackbar_add
+Date and Time: 08-Jul-25 04:12:05 PM - INFO - AllTests.test_34_income_invalid_date_add - Line number: 85 : Starting test: test_34_income_invalid_date_add
+Date and Time: 08-Jul-25 04:12:11 PM - INFO - Expenses - Line number: 233 : Correctly detected invalid date format.
+Date and Time: 08-Jul-25 04:12:11 PM - INFO - AllTests.test_34_income_invalid_date_add - Line number: 91 : Completed test: test_34_income_invalid_date_add
+Date and Time: 08-Jul-25 04:12:11 PM - INFO - AllTests.test_35_valid_expense_add - Line number: 85 : Starting test: test_35_valid_expense_add
+Date and Time: 08-Jul-25 04:12:15 PM - INFO - AllTests.test_35_valid_expense_add - Line number: 91 : Completed test: test_35_valid_expense_add
+Date and Time: 08-Jul-25 04:12:15 PM - INFO - AllTests.test_36_expense_empty_required_fields_add - Line number: 85 : Starting test: test_36_expense_empty_required_fields_add
+Date and Time: 08-Jul-25 04:12:27 PM - ERROR - Expenses - Line number: 306 : Mandatory field validation message not shown.
+Date and Time: 08-Jul-25 04:12:28 PM - INFO - AllTests.test_36_expense_empty_required_fields_add - Line number: 91 : Completed test: test_36_expense_empty_required_fields_add
+Date and Time: 08-Jul-25 04:12:28 PM - INFO - AllTests.test_37_expense_file_upload_invalid_type_add - Line number: 85 : Starting test: test_37_expense_file_upload_invalid_type_add
+Date and Time: 08-Jul-25 04:12:34 PM - ERROR - Expenses - Line number: 352 : Invalid file was uploaded and accepted without error.
+Date and Time: 08-Jul-25 04:12:34 PM - INFO - AllTests.test_37_expense_file_upload_invalid_type_add - Line number: 91 : Completed test: test_37_expense_file_upload_invalid_type_add
+Date and Time: 08-Jul-25 04:12:34 PM - INFO - AllTests.test_38_expense_snackbar_add - Line number: 85 : Starting test: test_38_expense_snackbar_add
+Date and Time: 08-Jul-25 04:12:41 PM - INFO - Expenses - Line number: 387 : Snackbar message displayed: Expense saved successfully!
+Date and Time: 08-Jul-25 04:12:41 PM - INFO - AllTests.test_38_expense_snackbar_add - Line number: 91 : Completed test: test_38_expense_snackbar_add
+Date and Time: 08-Jul-25 04:12:41 PM - INFO - AllTests.test_39_expense_invalid_date_add - Line number: 85 : Starting test: test_39_expense_invalid_date_add
+Date and Time: 08-Jul-25 04:12:52 PM - INFO - Expenses - Line number: 425 : Correctly detected invalid date format.
+Date and Time: 08-Jul-25 04:12:52 PM - INFO - AllTests.test_39_expense_invalid_date_add - Line number: 91 : Completed test: test_39_expense_invalid_date_add
+Date and Time: 08-Jul-25 04:12:52 PM - INFO - AllTests.test_40_edit_expense - Line number: 85 : Starting test: test_40_edit_expense
+Date and Time: 08-Jul-25 04:13:09 PM - INFO - AllTests.test_40_edit_expense - Line number: 91 : Completed test: test_40_edit_expense
+Date and Time: 08-Jul-25 04:13:09 PM - INFO - AllTests.test_41_expense_edit_empty_required_fields - Line number: 85 : Starting test: test_41_expense_edit_empty_required_fields
+Date and Time: 08-Jul-25 04:13:28 PM - ERROR - Expenses - Line number: 513 : Mandatory field validation message not shown.
+Date and Time: 08-Jul-25 04:13:28 PM - INFO - AllTests.test_41_expense_edit_empty_required_fields - Line number: 91 : Completed test: test_41_expense_edit_empty_required_fields
+Date and Time: 08-Jul-25 04:13:28 PM - INFO - AllTests.test_42_expense_edit_invalid_amount - Line number: 85 : Starting test: test_42_expense_edit_invalid_amount
+Date and Time: 08-Jul-25 04:13:39 PM - ERROR - Expenses - Line number: 533 : Invalid amount format was accepted without showing an error.
+Date and Time: 08-Jul-25 04:13:39 PM - INFO - AllTests.test_42_expense_edit_invalid_amount - Line number: 91 : Completed test: test_42_expense_edit_invalid_amount
+Date and Time: 08-Jul-25 04:13:39 PM - INFO - AllTests.test_43_snackbar_expense_edit - Line number: 85 : Starting test: test_43_snackbar_expense_edit
+Date and Time: 08-Jul-25 04:13:57 PM - ERROR - Expenses - Line number: 557 : Snackbar not found or message incorrect after expense edit.
+Date and Time: 08-Jul-25 04:13:57 PM - INFO - AllTests.test_43_snackbar_expense_edit - Line number: 91 : Completed test: test_43_snackbar_expense_edit
+Date and Time: 08-Jul-25 04:13:57 PM - INFO - AllTests.test_44_expense_edit_delete - Line number: 85 : Starting test: test_44_expense_edit_delete
+Date and Time: 08-Jul-25 04:14:12 PM - ERROR - Expenses - Line number: 576 : Expense deletion failed or snackbar not found after edit.
+Date and Time: 08-Jul-25 04:14:12 PM - INFO - AllTests.test_44_expense_edit_delete - Line number: 91 : Completed test: test_44_expense_edit_delete
+Date and Time: 08-Jul-25 04:14:12 PM - INFO - AllTests.test_45_expense_delete - Line number: 85 : Starting test: test_45_expense_delete
+Date and Time: 08-Jul-25 04:14:13 PM - INFO - Expenses - Line number: 588 : Expense deleted successfully.
+Date and Time: 08-Jul-25 04:14:13 PM - INFO - AllTests.test_45_expense_delete - Line number: 91 : Completed test: test_45_expense_delete
+Date and Time: 08-Jul-25 04:14:13 PM - INFO - AllTests.test_46_snackbar_expense_delete - Line number: 85 : Starting test: test_46_snackbar_expense_delete
+Date and Time: 08-Jul-25 04:14:25 PM - ERROR - Expenses - Line number: 607 : Snackbar not found or message incorrect after expense deletion.
+Date and Time: 08-Jul-25 04:14:25 PM - INFO - AllTests.test_46_snackbar_expense_delete - Line number: 91 : Completed test: test_46_snackbar_expense_delete
+Date and Time: 08-Jul-25 04:14:25 PM - INFO - AllTests.test_47_expense_report - Line number: 85 : Starting test: test_47_expense_report
+Date and Time: 08-Jul-25 04:14:27 PM - INFO - AllTests.test_47_expense_report - Line number: 91 : Completed test: test_47_expense_report
+Date and Time: 08-Jul-25 04:14:28 PM - INFO - AllTests.test_48_filter_by_month_and_year - Line number: 85 : Starting test: test_48_filter_by_month_and_year
+Date and Time: 08-Jul-25 04:14:44 PM - INFO - AllTests.test_48_filter_by_month_and_year - Line number: 91 : Completed test: test_48_filter_by_month_and_year
+Date and Time: 08-Jul-25 04:14:44 PM - INFO - AllTests.test_49_filter_by_date_range - Line number: 85 : Starting test: test_49_filter_by_date_range
+Date and Time: 08-Jul-25 04:14:57 PM - INFO - AllTests.test_49_filter_by_date_range - Line number: 91 : Completed test: test_49_filter_by_date_range
+Date and Time: 08-Jul-25 04:14:57 PM - INFO - AllTests.test_50_export_expense_to_excel - Line number: 85 : Starting test: test_50_export_expense_to_excel
+Date and Time: 08-Jul-25 04:15:01 PM - INFO - expense reort - Line number: 67 : Excel file exported successfully.
+Date and Time: 08-Jul-25 04:15:01 PM - INFO - AllTests.test_50_export_expense_to_excel - Line number: 91 : Completed test: test_50_export_expense_to_excel
+Date and Time: 08-Jul-25 04:15:01 PM - INFO - AllTests.test_51_category_ledger - Line number: 85 : Starting test: test_51_category_ledger
+Date and Time: 08-Jul-25 04:15:06 PM - INFO - AllTests.test_51_category_ledger - Line number: 91 : Completed test: test_51_category_ledger
+Date and Time: 08-Jul-25 04:15:06 PM - INFO - AllTests.test_52_filter_category_ledger_by_date - Line number: 85 : Starting test: test_52_filter_category_ledger_by_date
+Date and Time: 08-Jul-25 04:15:10 PM - INFO - category ledger - Line number: 55 : Applying date filter from 01-07-2025 to 31-07-2025
+Date and Time: 08-Jul-25 04:15:22 PM - INFO - AllTests.test_52_filter_category_ledger_by_date - Line number: 91 : Completed test: test_52_filter_category_ledger_by_date
+Date and Time: 08-Jul-25 04:15:22 PM - INFO - AllTests.test_53_totals_calculation - Line number: 85 : Starting test: test_53_totals_calculation
+Date and Time: 08-Jul-25 04:15:26 PM - INFO - category ledger - Line number: 137 : [PASS]  Income: 846014.0 | Expense: 0.0 | Expected Closing: 846014.0 | Displayed Closing: 846014.0
+Date and Time: 08-Jul-25 04:15:26 PM - INFO - AllTests.test_53_totals_calculation - Line number: 91 : Completed test: test_53_totals_calculation
+Date and Time: 08-Jul-25 04:15:26 PM - INFO - AllTests.test_54_export_category_ledger_to_excel - Line number: 85 : Starting test: test_54_export_category_ledger_to_excel
+Date and Time: 08-Jul-25 04:15:31 PM - INFO - category ledger - Line number: 100 : [PASS] File downloaded successfully: C:\Users\admin\Downloads\CATEGORY_WISE_LEDGER_01-07-2025_to_31-07-2025 (31).xls
+Date and Time: 08-Jul-25 04:15:31 PM - INFO - AllTests.test_54_export_category_ledger_to_excel - Line number: 91 : Completed test: test_54_export_category_ledger_to_excel
+Date and Time: 08-Jul-25 04:15:31 PM - INFO - AllTests.logout - Line number: 85 : Starting test: logout
+Date and Time: 08-Jul-25 04:15:31 PM - INFO - Logout - Line number: 34 : Performing logout operation.
+Date and Time: 08-Jul-25 04:15:36 PM - INFO - Logout - Line number: 43 : Logout successful.
+Date and Time: 08-Jul-25 04:15:36 PM - INFO - AllTests.logout - Line number: 91 : Completed test: logout
+Date and Time: 08-Jul-25 04:15:36 PM - INFO - AllTests - Line number: 68 : Closing browser after all tests completed
+Date and Time: 08-Jul-25 04:15:39 PM - INFO - AllTests - Line number: 70 : Browser closed and driver quit successfully

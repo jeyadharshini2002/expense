@@ -8,6 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,7 +26,7 @@ jobs:
       - name: Run Tests
         run: |
           cd expense_automation
-          python -m all_tests
+          python all_tests.py
 
       - name: Upload HTML Reports
         if: always()
