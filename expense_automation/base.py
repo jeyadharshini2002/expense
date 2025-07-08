@@ -1,4 +1,5 @@
 import configparser
+from selenium.common.exceptions import StaleElementReferenceException
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
@@ -79,7 +80,13 @@ class BasePage:
 
     # this function performs to get the text of web element whose locator is passed to it.
     def get_text(self, by_locator):
-        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).text
+        try:
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(by_locator))
+            return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).text
+        except StaleElementReferenceException:
+            # Re-fetch element once if it's stale
+            WebDriverWait(self.driver, 10).until(EC.staleness_of(self.driver.find_element(*by_locator)))
+            return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).text
 
     # this function performs to get the value of input field whose locator is passed to it.
     def get_attribute(self, by_locator):
