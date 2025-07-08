@@ -10,6 +10,17 @@ from expense_testcases.expense_report import exp_report
 from expense_testcases.categorywiseledger import category_ledger
 from expense_testcases.authentication.logout import Logout
 from expense_testcases.dashboard import TestDashboard
+import HtmlTestRunner.result
+
+# Monkey patch to fix AttributeError in HtmlTestRunner
+def _count_relevant_tb_levels(self, tb):
+    length = 0
+    while tb and not self._is_relevant_tb_level(tb):
+        tb = tb.tb_next
+        length += 1
+    return length
+
+HtmlTestRunner.result.HtmlTestResult._count_relevant_tb_levels = _count_relevant_tb_levels
 
 class AllTests(TestBase):
     """
