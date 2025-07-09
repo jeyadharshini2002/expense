@@ -99,7 +99,7 @@ class Expenses(BasePage,unittest.TestCase):
         # Wait for and verify toast/snackbar
         try:
             toast = WebDriverWait(self.driver, 12).until(
-                EC.presence_of_element_located((By.XPATH, "//*[contains(., 'Income saved successfully!')]"))
+                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
             self.driver.save_screenshot("toast_visible.png")
             assert "Income saved successfully!" in toast.text
@@ -110,7 +110,7 @@ class Expenses(BasePage,unittest.TestCase):
             try:
                 self.click(Locators.EXPENSES_INCOME_SAVE)
                 toast = WebDriverWait(self.driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, "//*[contains(., 'Income saved successfully!')]"))
+                    EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
                 )
                 self.driver.save_screenshot("toast_visible_retry.png")
                 assert "Income saved successfully!" in toast.text
