@@ -81,6 +81,7 @@ class Expenses(BasePage,unittest.TestCase):
 
             current_dir = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.abspath(os.path.join(current_dir, "../screenshot.png"))
+            time.sleep(2)
 
             if os.path.exists(file_path):
                 file_input.send_keys(file_path)
@@ -92,6 +93,7 @@ class Expenses(BasePage,unittest.TestCase):
 
         self.click(Locators.EXPENSES_INCOME_SAVE)
         time.sleep(3)
+        self.driver.save_screenshot("snackbar.png")
 
         # Retry click once more (in case toast never triggered)
         try:

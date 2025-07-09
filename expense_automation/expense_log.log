@@ -15857,3 +15857,15 @@ Date and Time: 09-Jul-25 10:34:00 AM - INFO - AllTests - Line number: 88 : Brows
 Date and Time: 09-Jul-25 10:34:10 AM - INFO - AllTests.test_30_add_income - Line number: 109 : Completed test: test_30_add_income
 Date and Time: 09-Jul-25 10:34:10 AM - INFO - AllTests - Line number: 86 : Closing browser after all tests completed
 Date and Time: 09-Jul-25 10:34:12 AM - INFO - AllTests - Line number: 88 : Browser closed and driver quit successfully
+Date and Time: 09-Jul-25 11:17:03 AM - INFO - AllTests - Line number: 34 : Setting up Chrome driver for all tests
+Date and Time: 09-Jul-25 11:17:07 AM - INFO - AllTests - Line number: 73 : Browser initialized and navigated to https://dev.mehainfotech.com/expense-manager
+Date and Time: 09-Jul-25 11:17:07 AM - INFO - AllTests.f_login_successful - Line number: 103 : Starting test: f_login_successful
+Date and Time: 09-Jul-25 11:17:14 AM - INFO - LoginPage - Line number: 138 : Login successful, no error message found.
+Date and Time: 09-Jul-25 11:17:14 AM - INFO - LoginPage - Line number: 144 : Login successful.
+Date and Time: 09-Jul-25 11:17:16 AM - INFO - AllTests.f_login_successful - Line number: 109 : Completed test: f_login_successful
+Date and Time: 09-Jul-25 11:17:16 AM - INFO - AllTests.test_28_expense_tab - Line number: 103 : Starting test: test_28_expense_tab
+Date and Time: 09-Jul-25 11:17:19 AM - INFO - AllTests.test_28_expense_tab - Line number: 109 : Completed test: test_28_expense_tab
+Date and Time: 09-Jul-25 11:17:19 AM - INFO - AllTests.test_30_add_income - Line number: 103 : Starting test: test_30_add_income
+Date and Time: 09-Jul-25 11:17:27 AM - INFO - AllTests.test_30_add_income - Line number: 109 : Completed test: test_30_add_income
+Date and Time: 09-Jul-25 11:17:27 AM - INFO - AllTests - Line number: 86 : Closing browser after all tests completed
+Date and Time: 09-Jul-25 11:17:29 AM - INFO - AllTests - Line number: 88 : Browser closed and driver quit successfully
