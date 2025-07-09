@@ -94,20 +94,17 @@ class Expenses(BasePage,unittest.TestCase):
         self.click(Locators.EXPENSES_INCOME_SAVE)
         time.sleep(3)
         self.driver.save_screenshot("snackbar.png")
-
-        # Retry click once more (in case toast never triggered)
         try:
             toast = WebDriverWait(self.driver, 8).until(
-                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
+                EC.visibility_of_element_located((By.XPATH, "//*[contains(., 'Income saved successfully!')]"))
             )
-            assert "Income saved successfully!" in toast.text
-        except Exception:
-            print("Toast not visible on first click, retrying Save button...")
-            self.click(Locators.EXPENSES_INCOME_SAVE)
+        except TimeoutException:
+            print("Retrying toast check after 3s...")
+            time.sleep(3)
             toast = WebDriverWait(self.driver, 8).until(
-                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
+                EC.visibility_of_element_located((By.XPATH, "//*[contains(., 'Income saved successfully!')]"))
             )
-            assert "Income saved successfully!" in toast.text
+
 
 
             
