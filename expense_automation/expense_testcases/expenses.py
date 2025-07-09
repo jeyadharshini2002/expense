@@ -95,6 +95,7 @@ class Expenses(BasePage,unittest.TestCase):
         # Click Save
         self.click(Locators.EXPENSES_INCOME_SAVE)
         self.driver.save_screenshot("after_save_click.png")
+        time.sleep(6)
 
         # Wait for and verify toast/snackbar
         try:
@@ -103,24 +104,9 @@ class Expenses(BasePage,unittest.TestCase):
             )
             self.driver.save_screenshot("toast_visible.png")
             assert "Income saved successfully!" in toast.text
-        except Exception as e:
-            # Retry once (CI is flaky sometimes)
-            print("First toast wait failed. Retrying after 3 seconds...")
-            time.sleep(3)
-            try:
-                self.click(Locators.EXPENSES_INCOME_SAVE)
-                toast = WebDriverWait(self.driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
-                )
-                self.driver.save_screenshot("toast_visible_retry.png")
-                assert "Income saved successfully!" in toast.text
-            except Exception as final_error:
-                # Save full HTML and screenshot for debugging
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                self.driver.save_screenshot(f"toast_failure_{timestamp}.png")
-                with open(f"toast_failure_page_{timestamp}.html", "w", encoding="utf-8") as f:
-                    f.write(self.driver.page_source)
-                raise AssertionError("Snackbar not found or message incorrect after retry") from final_error
+        except:
+            self.fail("Toast not Came") 
+            self.driver.save_screenshot("Toast_notvisible.png")
 
 
 
