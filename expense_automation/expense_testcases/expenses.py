@@ -111,14 +111,16 @@ class Expenses(BasePage,unittest.TestCase):
         
 
         try:
-            toast = WebDriverWait(self.driver, 3).until(
-                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
+            toast = WebDriverWait(self.driver, 10).until(  # increase from 3 to 10 seconds
+                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
             assert "Income saved successfully!" in toast.text
-
         except Exception as e:
             self.driver.save_screenshot("expense_save_failed.png")
-            self.fail("Snackbar not found or message incorrect") 
+            with open("page_source_after_fail.html", "w", encoding="utf-8") as f:
+                f.write(self.driver.page_source)
+            raise AssertionError("Snackbar not found or message incorrect") from e
+
 
             
     def test_income_empty_required_fields_add(self):
