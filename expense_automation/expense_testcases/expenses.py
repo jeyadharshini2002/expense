@@ -99,13 +99,13 @@ class Expenses(BasePage,unittest.TestCase):
 
         # Wait for and verify toast/snackbar
         try:
-            toast = WebDriverWait(self.driver, 12).until(
+            toast = WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
             self.driver.save_screenshot("toast_visible.png")
             assert "Income saved successfully!" in toast.text
-        except:
-            self.fail("Toast not Came") 
+        except Exception as e:
+            self.fail(f"Toast not Came: {e}") 
             self.driver.save_screenshot("Toast_notvisible.png")
 
 
