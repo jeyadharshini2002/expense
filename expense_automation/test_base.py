@@ -2,15 +2,12 @@ import unittest
 import os
 import uuid
 import configparser
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from logger_file import get_logger
 import tempfile
 import platform
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-import tempfile
+from webdriver_manager.chrome import ChromeDriverManager
+from logger_file import get_logger
 
 # Load config
 config = configparser.ConfigParser()
@@ -27,7 +24,7 @@ class TestBase(unittest.TestCase):
     """
     driver = None
     logger = None
-    
+
     @classmethod
     def setUpClass(cls):
         """
@@ -35,43 +32,50 @@ class TestBase(unittest.TestCase):
         """
         cls.logger = get_logger(cls.__name__)
         cls.logger.info("Setting up Chrome driver for all tests")
-        
+
         # Ensure TEST_URL is present
         if 'TEST_URL' not in config['expense']:
             raise ValueError("Missing 'TEST_URL' in expense section!")
-        
+
         try:
             # Use webdriver-manager to fetch the correct driver
             chrome_service = Service(ChromeDriverManager().install())
             chrome_options = webdriver.ChromeOptions()
 
+            # Profile isolation
             unique_profile = os.path.join(tempfile.gettempdir(), f"profile-{uuid.uuid4()}")
             chrome_options.add_argument(f"--user-data-dir={unique_profile}")
             chrome_options.add_argument("--remote-debugging-port=0")
 
-            
-            # Add options for better stability
-            chrome_options.add_argument("--headless=new")
-
+            # COMMON OPTIONS
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-popup-blocking")
             chrome_options.add_argument("--disable-notifications")
             chrome_options.add_argument("--disable-dev-shm-usage")
             chrome_options.add_argument("--no-sandbox")
-            
+
+            # ⚪️ UNCOMMENT THIS BLOCK FOR GITHUB ACTIONS (HEADLESS)
+            # chrome_options.add_argument('--headless')
+            # chrome_options.add_argument('--disable-gpu')
+            # chrome_options.add_argument('--window-size=1920x1080')
+
+            # ⚪️ COMMENT THIS LINE IF USING HEADLESS (GitHub)
+            # chrome_options.add_argument("--start-maximized")
+
+            # Initialize driver
             cls.driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
             cls.driver.get(config['expense']['TEST_URL'])
-            # cls.driver.maximize_window()  # ❌ remove or comment this
-            cls.driver.set_window_size(1920, 1080)  # ✅ explicitly set size
+
+            # ⚪️ UNCOMMENT THIS FOR CI (already handled by window-size)
+            cls.driver.set_window_size(1920, 1080)
 
             cls.driver.implicitly_wait(10)
-            
             cls.logger.info(f"Browser initialized and navigated to {config['expense']['TEST_URL']}")
-            
+
         except Exception as e:
             cls.logger.error(f"Failed to initialize Chrome driver: {str(e)}")
             raise
-    
+
     @classmethod
     def tearDownClass(cls):
         """
@@ -86,22 +90,22 @@ class TestBase(unittest.TestCase):
                 cls.logger.error(f"Error closing browser: {str(e)}")
             finally:
                 cls.driver = None
-    
+
     def setUp(self) -> None:
         """
         Setup before each individual test - no new driver creation
         """
         if not self.driver:
             raise Exception("WebDriver not initialized. Check setUpClass method.")
-        
+
         # Get logger for individual test
         self.test_logger = get_logger(f"{self.__class__.__name__}.{self._testMethodName}")
         self.test_logger.info(f"Starting test: {self._testMethodName}")
-    
+
     def tearDown(self):
         """
         Cleanup after each test - don't close the driver
         """
         self.test_logger.info(f"Completed test: {self._testMethodName}")
-        # Optional: Add any cleanup code here like clearing cookies, etc.
+        # Optional cleanup like clearing cookies
         # self.driver.delete_all_cookies()
