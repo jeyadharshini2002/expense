@@ -36,7 +36,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html-report
-          path: reports/*.html
+          path: expense_automation/reports/*.html
+
           
       - name: Show report directory contents
         run: |
