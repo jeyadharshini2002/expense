@@ -92,6 +92,8 @@ class Expenses(BasePage,unittest.TestCase):
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
 
+        self.driver.save_screenshot("screenshots/before_save_click.png")
+
         # Click Save
         self.click(Locators.EXPENSES_INCOME_SAVE)
         os.makedirs("screenshots", exist_ok=True)
