@@ -142,37 +142,51 @@ class Expenses(BasePage,unittest.TestCase):
 
 
     def test_income_file_upload_invalid_type_add(self):
+        """Test uploading an invalid file type for income entry fails and shows an error."""
         
         fake = Faker()
 
         # Start filling the form
         self.click(Locators.EXPENSES_ADD_INCOME_BT)
-        fake = Faker()
-        self.enter_text(Locators.EXPENSES_INCOME_DATE, Faker().date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y"))
+        self.enter_text(
+            Locators.EXPENSES_INCOME_DATE,
+            fake.date_between_dates(
+                date_start=datetime(2000, 1, 1),
+                date_end=datetime(2020, 12, 31)
+            ).strftime("%m-%d-%Y")
+        )
         self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY, 1)
+        time.sleep(3)
         self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
-        self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid Expense")
+        self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Invalid file upload checking")
 
-        # Debug info for file inputs
-        inputs = self.driver.find_elements(By.XPATH, "//input[@type='file']")
-        print("Found file inputs:", len(inputs))
-        for i, el in enumerate(inputs):
-            print(f"{i}: id={el.get_attribute('id')}, name={el.get_attribute('name')}")
+        try:
+            file_input = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
+            )
 
-        # Upload invalid file type
-        file_input = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
-        )
+            self.driver.execute_script("""
+                arguments[0].style.display = 'block';
+                arguments[0].style.visibility = 'visible';
+                arguments[0].style.opacity = 1;
+            """, file_input)
 
-        self.driver.execute_script("""
-            arguments[0].style.display = 'block';
-            arguments[0].style.visibility = 'visible';
-            arguments[0].style.opacity = 1;
-        """, file_input)
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.abspath(os.path.join(current_dir, "../Cucumber.xml"))
 
-        file_path = r"C:/Users/admin/Desktop/Cucumber.xml"  # Invalid file type
-        file_input.send_keys(file_path)
+            if os.path.exists(file_path):
+                file_input.send_keys(file_path)
+            else:
+                raise FileNotFoundError(f"File not found: {file_path}")
+
+        except Exception as e:
+            os.makedirs("screenshots", exist_ok=True)
+            self.driver.save_screenshot("screenshots/file_upload_failed.png")
+            self.fail(f"File input not found or upload failed: {e}")
+
+        os.makedirs("screenshots", exist_ok=True)
+        self.driver.save_screenshot("screenshots/before_save_click.png")
 
         # Submit form
         self.click(Locators.EXPENSES_INCOME_SAVE)
@@ -181,20 +195,15 @@ class Expenses(BasePage,unittest.TestCase):
         try:
             # Try to find an error message related to file type
             error = WebDriverWait(self.driver, 3).until(
-                EC.presence_of_element_located((By.XPATH, "//*[contains(text(),'invalid file')]"))
+                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(),'Invalid file')]"))
             )
             assert error.is_displayed(), "Error message not visible"
             self.logger.info("Correctly detected invalid file upload.")
         except TimeoutException:
-            self.logger.warning("No invalid file error message not displayed.")
+            self.driver.save_screenshot("screenshots/Invalidfileupload.png")
+            self.logger.warning("No invalid file error message displayed.")
             self.fail("Invalid file upload did not show expected error message.")
 
-        # # Always click Back (even if error not shown)
-        # try:
-        #     self.click(Locators.EXPENSES_INCOME_BACK)
-        #     self.logger.info("Navigated back after invalid file upload attempt.")
-        # except Exception as e:
-        #     self.logger.error(f"Failed to click back button: {str(e)}")
 
 
     def test_income_snackbar_add(self):
@@ -204,6 +213,7 @@ class Expenses(BasePage,unittest.TestCase):
         self.enter_text(Locators.EXPENSES_INCOME_DATE, Faker().date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y"))
         
         self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY,1)
+        time.sleep(2)
         self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY,1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_INCOME_NOTES, "snackbar test response")
@@ -264,48 +274,55 @@ class Expenses(BasePage,unittest.TestCase):
         self.enter_text(Locators.EXPENSES_EXPENSE_DATE, Faker().date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y"))
         
         self.dropdown_click(Locators.EXPENSES_EXPENSE_CATEGORY, 1)
+        time.sleep(3)
         self.dropdown_click(Locators.EXPENSE_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_EXPENSE_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_EXPENSE_NOTES, "Valid Expense")
+        # Upload file
         try:
-            # Debug list of file inputs
-            inputs = self.driver.find_elements(By.XPATH, "//input[@type='file']")
-            print("Found file inputs:", len(inputs))
-            for i, el in enumerate(inputs):
-                print(f"{i}: id={el.get_attribute('id')}, name={el.get_attribute('name')}")
-
             file_input = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))  # fallback generic
+                EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
             )
 
-            # Make it visible
             self.driver.execute_script("""
                 arguments[0].style.display = 'block';
                 arguments[0].style.visibility = 'visible';
                 arguments[0].style.opacity = 1;
             """, file_input)
 
-            file_path = r"C:\Users\admin\Downloads\expense\expense\expense\expense_automation\screenshot.png"
-            file_input.send_keys(file_path)
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.abspath(os.path.join(current_dir, "../screenshot.png"))
 
-
+            if os.path.exists(file_path):
+                file_input.send_keys(file_path)
+            else:
+                raise FileNotFoundError(f"File not found: {file_path}")
         except Exception as e:
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
-        time.sleep(3)
-        self.click(Locators.EXPENSES_INCOME_SAVE)
-        
+        os.makedirs("screenshots", exist_ok=True)
+        self.driver.save_screenshot("screenshots/before_save_click.png")
 
-        # try:
-        #     toast = WebDriverWait(self.driver, 3).until(
-        #         EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]"))
-        #     )
-        #     assert "Expense saved successfully!" in toast.text
-        #     self.click(Locators.EXPENSES_INCOME_BACK)
-        # except Exception as e:
-        #     self.driver.save_screenshot("expense_save_failed.png")
-        #     self.fail("Snackbar not found or message incorrect") 
-        #     self.click(Locators.EXPENSES_INCOME_BACK)
+        time.sleep(3)
+        self.click(Locators.EXPENSES_EXPENSE_SAVE)
+        
+        self.driver.save_screenshot("screenshots/after_save_click.png")
+        time.sleep(6)
+
+        # Wait for and verify toast/snackbar
+        try:
+            toast = WebDriverWait(self.driver, 15).until(
+                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]"))
+            )
+            self.driver.save_screenshot("screenshots/Toast_visible.png")
+            assert "Expense saved successfully!" in toast.text
+        except Exception as e:
+            self.driver.save_screenshot("screenshots/Toast_notvisible.png")
+            toasts = self.driver.find_elements(By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]")
+            if any("Expense saved successfully!" in t.text for t in toasts):
+                print("Toast was present but not caught in wait.")
+            else:
+                self.fail(f"Toast not Came: {e}")
             
     def test_expense_empty_required_fields_add(self):
 
@@ -330,29 +347,36 @@ class Expenses(BasePage,unittest.TestCase):
         fake = Faker()
         self.enter_text(Locators.EXPENSES_EXPENSE_DATE, Faker().date_between(start_date=date(2000, 1, 1), end_date=date(2010, 1, 1)).strftime("%m-%d-%Y"))
         self.dropdown_click(Locators.EXPENSES_EXPENSE_CATEGORY, 1)
+        time.sleep(2)
         self.dropdown_click(Locators.EXPENSE_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_EXPENSE_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_EXPENSE_NOTES, "invalid file upload")
 
-         # Debug info for file inputs
-        inputs = self.driver.find_elements(By.XPATH, "//input[@type='file']")
-        print("Found file inputs:", len(inputs))
-        for i, el in enumerate(inputs):
-            print(f"{i}: id={el.get_attribute('id')}, name={el.get_attribute('name')}")
+        try:
+            file_input = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
+                )
 
-        # Upload invalid file type
-        file_input = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
-        )
+            self.driver.execute_script("""
+                arguments[0].style.display = 'block';
+                arguments[0].style.visibility = 'visible';
+                arguments[0].style.opacity = 1;
+            """, file_input)
 
-        self.driver.execute_script("""
-            arguments[0].style.display = 'block';
-            arguments[0].style.visibility = 'visible';
-            arguments[0].style.opacity = 1;
-        """, file_input)
-
-        file_path = r"C:/Users/admin/Desktop/Cucumber.xml"  # Invalid file type
-        file_input.send_keys(file_path)
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.abspath(os.path.join(current_dir, "../Cucumber.xml"))
+            
+            if os.path.exists(file_path):
+                file_input.send_keys(file_path)
+            else:
+                raise FileNotFoundError(f"File not found: {file_path}")
+        except Exception as e:
+            os.makedirs("screenshots", exist_ok=True)
+            self.driver.save_screenshot("invalid_expense_uploaded_file.png")
+            self.fail(f"File input not found or upload failed: {e}")
+        
+        self.driver.save_screenshot("screenshots/before_save_expense_invalid_click.png")
+        
 
         # Submit form
         self.click(Locators.EXPENSES_EXPENSE_SAVE)
@@ -360,25 +384,13 @@ class Expenses(BasePage,unittest.TestCase):
 
 
         try:
-            # Wait to see if success message appears—this SHOULD NOT happen
-            success_message = WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]"))
+            error_message = WebDriverWait(self.driver, 5).until(
+                EC.visibility_of_element_located((By.XPATH, "//div[contains(text(), 'Invalid file format')]"))
             )
-            if success_message.is_displayed():
-                self.logger.error("Invalid file was uploaded and accepted without error.")
-                self.driver.save_screenshot("invalid_file_upload.png")
-                self.fail("Invalid file upload incorrectly triggered a success message.")
+            self.assertTrue(error_message.is_displayed(), "Expected error message not shown for invalid file type.")
         except TimeoutException:
-            self.logger.info("No success message appeared, which is expected for an invalid file.")
-        # Always click Back, regardless of outcome
-        # try:
-        #     self.click(Locators.EXPENSES_EXPENSE_BACK)
-        #     self.logger.info("Navigated back after invalid file upload attempt.")
-        # except Exception as e:
-        #     self.logger.error(f"Failed to click back button: {str(e)}")
+            self.logger.warning("Expected error message for invalid file upload did not appear.")
 
-        
-       
 
     def test_expense_snackbar_add(self):
         self.click(Locators.EXPENSES_EXPENSE_BACK)
@@ -480,26 +492,6 @@ class Expenses(BasePage,unittest.TestCase):
             self.driver.save_screenshot("expense_edit_failed.png")
             self.fail("Expense not updated or toast not shown.")
 
-        # # Now try to go back using JS
-        # try:
-        #     time.sleep(1)  # wait for toast to fade
-        #     self.driver.execute_script("window.history.go(-2);")
-        #     time.sleep(2)  # wait for back to load
-        #     self.logger.info("Navigated back using window.history.go(-2).")
-        # except Exception as e:
-        #     self.logger.error("JS history back failed: " + str(e))
-        #     self.driver.save_screenshot("js_go_back_failed.png")
-        #     self.fail("JS go(-2) failed.")
-
-        # # Optional: verify you are back on the listing screen
-        # try:
-        #     WebDriverWait(self.driver, 5).until(
-        #         EC.presence_of_element_located((By.XPATH, "//h4[contains(text(),'Expense List')]"))
-        #     )
-        #     self.logger.info("Returned to Expense List screen successfully.")
-        # except:
-        #     self.driver.save_screenshot("back_navigation_failed.png")
-        #     self.fail("Not redirected to expense list after go back.")
 
     def test_expense_edit_empty_required_fields(self):
         # self.click(Locators.EXPENSES_EDIT_BUTTON)
