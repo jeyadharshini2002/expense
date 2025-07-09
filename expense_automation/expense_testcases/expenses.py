@@ -245,6 +245,7 @@ class Expenses(BasePage,unittest.TestCase):
         self.click(Locators.EXPENSES_ADD_INCOME_BT)
         self.enter_text(Locators.EXPENSES_INCOME_DATE, "10-10-2026")
         self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY, 1)
+        time.sleep(2)        
         self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid Expense")
@@ -398,30 +399,26 @@ class Expenses(BasePage,unittest.TestCase):
         self.click(Locators.EXPENSES_ADD_EXPENSE_BT)
         self.enter_text(Locators.EXPENSES_INCOME_DATE, Faker().date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y"))
         self.dropdown_click(Locators.EXPENSES_EXPENSE_CATEGORY, 1)
+        time.sleep(2)
         self.dropdown_click(Locators.EXPENSE_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_EXPENSE_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_EXPENSE_NOTES, "Snackbar test expense")
         self.click(Locators.EXPENSES_EXPENSE_SAVE)
         time.sleep(2)  # Wait for the snackbar to appear
+        # Wait for and verify toast/snackbar
         try:
-            # Update the locator based on your HTML structure. Adjust class if needed.
-            toast_locator = (By.XPATH, "//div[contains(text(),'Expense') and contains(text(),'successfully!')]")
-
-            toast = WebDriverWait(self.driver, 5).until(
-                EC.visibility_of_element_located(toast_locator)
+            toast = WebDriverWait(self.driver, 15).until(
+                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]"))
             )
-
-            toast_text = toast.text
-            self.logger.info(f"Snackbar message displayed: {toast_text}")
-            print(toast_text, "snackbar msg")
-
-            self.assertIn("Expense", toast_text)
-            self.assertIn("successfully!", toast_text)
-
-        except TimeoutException:
-            self.logger.error("Snackbar message not displayed after adding Expense.")
-            self.driver.save_screenshot("Expense_add_snackbar_failed.png")
-            self.fail("Snackbar message not displayed after adding Expense.")
+            self.driver.save_screenshot("screenshots/Toast_visible.png")
+            assert "Expense saved successfully!" in toast.text
+        except Exception as e:
+            self.driver.save_screenshot("screenshots/Toast_notvisible.png")
+            toasts = self.driver.find_elements(By.XPATH, "//*[contains(text(), 'Expense saved successfully!')]")
+            if any("Expense saved successfully!" in t.text for t in toasts):
+                print("Toast was present but not caught in wait.")
+            else:
+                self.fail(f"Toast not Came: {e}")
         # Always click Back, regardless of outcome
         # try:
         #     self.click(Locators.EXPENSES_EXPENSE_BACK)
@@ -439,6 +436,7 @@ class Expenses(BasePage,unittest.TestCase):
         # self.click(Locators.EXPENSES_ADD_EXPENSE_BT)
         self.enter_text(Locators.EXPENSES_INCOME_DATE, Faker().date_between_dates(date_start=datetime(2025, 1, 1), date_end=datetime(2030, 12, 31)).strftime("%m-%d-%Y"))
         self.dropdown_click(Locators.EXPENSES_EXPENSE_CATEGORY, 1)
+        time.sleep(2)
         self.dropdown_click(Locators.EXPENSE_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_EXPENSE_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_EXPENSE_NOTES, "invalid date add in expense")

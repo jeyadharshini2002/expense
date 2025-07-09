@@ -256,47 +256,47 @@ if __name__ == "__main__":
 
      # === Manual Test Suite in Execution Order ===
     suite = unittest.TestSuite()
-    # suite.addTest(AllTests('test_01_login_invalid_credentials'))
-    # suite.addTest(AllTests('b_login_invalid_password'))
-    # suite.addTest(AllTests('c_login_invalid_username'))
-    # suite.addTest(AllTests('d_login_without_password'))
-    # suite.addTest(AllTests('e_login_without_username'))
+    suite.addTest(AllTests('test_01_login_invalid_credentials'))
+    suite.addTest(AllTests('b_login_invalid_password'))
+    suite.addTest(AllTests('c_login_invalid_username'))
+    suite.addTest(AllTests('d_login_without_password'))
+    suite.addTest(AllTests('e_login_without_username'))
     suite.addTest(AllTests('f_login_successful'))
 
-    # suite.addTest(AllTests('test_dashboard_balance_calculation'))
-    # suite.addTest(AllTests('test_dashboard_balance_non_negative'))
-    # suite.addTest(AllTests('test_dashboard_amounts_displayed'))
+    suite.addTest(AllTests('test_dashboard_balance_calculation'))
+    suite.addTest(AllTests('test_dashboard_balance_non_negative'))
+    suite.addTest(AllTests('test_dashboard_amounts_displayed'))
 
     
-    # suite.addTest(AllTests('test_02_category_tab'))
-    # suite.addTest(AllTests('test_03_create_new_category'))
-    # suite.addTest(AllTests('test_04_empty_category_name'))
-    # suite.addTest(AllTests('test_05_category_whitespace_only'))
-    # suite.addTest(AllTests('test_06_invalid_category_name'))
-    # suite.addTest(AllTests('test_07_duplicate_category_name'))
-    # suite.addTest(AllTests('test_08_long_category_name'))
-    # suite.addTest(AllTests('test_09_edit_category'))
-    # suite.addTest(AllTests('test_10_edit_category_empty_name'))
-    # suite.addTest(AllTests('test_11_edit_to_duplicate_category_name'))
-    # suite.addTest(AllTests('test_12_delete_category'))
-    # suite.addTest(AllTests('test_13_category_snackbar_add'))
-    # suite.addTest(AllTests('test_14_category_snackbar_edit'))
+    suite.addTest(AllTests('test_02_category_tab'))
+    suite.addTest(AllTests('test_03_create_new_category'))
+    suite.addTest(AllTests('test_04_empty_category_name'))
+    suite.addTest(AllTests('test_05_category_whitespace_only'))
+    suite.addTest(AllTests('test_06_invalid_category_name'))
+    suite.addTest(AllTests('test_07_duplicate_category_name'))
+    suite.addTest(AllTests('test_08_long_category_name'))
+    suite.addTest(AllTests('test_09_edit_category'))
+    suite.addTest(AllTests('test_10_edit_category_empty_name'))
+    suite.addTest(AllTests('test_11_edit_to_duplicate_category_name'))
+    suite.addTest(AllTests('test_12_delete_category'))
+    suite.addTest(AllTests('test_13_category_snackbar_add'))
+    suite.addTest(AllTests('test_14_category_snackbar_edit'))
 
 
 
-    # suite.addTest(AllTests('test_15_subcategory_tab'))
-    # suite.addTest(AllTests('test_16_create_new_subcategory'))
-    # suite.addTest(AllTests('test_17_empty_subcategory_name'))
-    # suite.addTest(AllTests('test_18_whitespace_subcategory_name'))
-    # suite.addTest(AllTests('test_19_invalid_subcategory_name'))
-    # suite.addTest(AllTests('test_20_duplicate_subcategory_name'))
-    # suite.addTest(AllTests('test_21_subcategory_without_category'))
-    # suite.addTest(AllTests('test_22_long_subcategory_name'))
-    # suite.addTest(AllTests('test_23_edit_subcategory'))
-    # suite.addTest(AllTests('test_24_edit_subcategory_empty_name'))
-    # suite.addTest(AllTests('test_25_delete_subcategory'))
-    # suite.addTest(AllTests('test_26_subcategory_snackbar_add'))
-    # suite.addTest(AllTests('test_27_subcategory_snackbar_edit'))
+    suite.addTest(AllTests('test_15_subcategory_tab'))
+    suite.addTest(AllTests('test_16_create_new_subcategory'))
+    suite.addTest(AllTests('test_17_empty_subcategory_name'))
+    suite.addTest(AllTests('test_18_whitespace_subcategory_name'))
+    suite.addTest(AllTests('test_19_invalid_subcategory_name'))
+    suite.addTest(AllTests('test_20_duplicate_subcategory_name'))
+    suite.addTest(AllTests('test_21_subcategory_without_category'))
+    suite.addTest(AllTests('test_22_long_subcategory_name'))
+    suite.addTest(AllTests('test_23_edit_subcategory'))
+    suite.addTest(AllTests('test_24_edit_subcategory_empty_name'))
+    suite.addTest(AllTests('test_25_delete_subcategory'))
+    suite.addTest(AllTests('test_26_subcategory_snackbar_add'))
+    suite.addTest(AllTests('test_27_subcategory_snackbar_edit'))
 
 
 
@@ -322,17 +322,17 @@ if __name__ == "__main__":
 
 
 
-    # suite.addTest(AllTests('test_47_expense_report'))
-    # suite.addTest(AllTests('test_48_filter_by_month_and_year'))
-    # suite.addTest(AllTests('test_49_filter_by_date_range'))
-    # suite.addTest(AllTests('test_50_export_expense_to_excel'))
+    suite.addTest(AllTests('test_47_expense_report'))
+    suite.addTest(AllTests('test_48_filter_by_month_and_year'))
+    suite.addTest(AllTests('test_49_filter_by_date_range'))
+    suite.addTest(AllTests('test_50_export_expense_to_excel'))
 
 
-    # suite.addTest(AllTests('test_51_category_ledger'))
-    # suite.addTest(AllTests('test_52_filter_category_ledger_by_date'))
-    # suite.addTest(AllTests('test_53_totals_calculation'))
-    # suite.addTest(AllTests('test_54_export_category_ledger_to_excel'))
-    # suite.addTest(AllTests('logout'))
+    suite.addTest(AllTests('test_51_category_ledger'))
+    suite.addTest(AllTests('test_52_filter_category_ledger_by_date'))
+    suite.addTest(AllTests('test_53_totals_calculation'))
+    suite.addTest(AllTests('test_54_export_category_ledger_to_excel'))
+    suite.addTest(AllTests('logout'))
 
 
     # Run tests with HTML report

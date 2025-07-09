@@ -38,11 +38,6 @@ jobs:
           name: html-reports
           path: expense_automation/reports/*.html
 
-      - name: List PNG files
-        if: always()
-        run: |
-          echo "Searching for screenshots:"
-          find . -name '*.png' || echo "No PNG files found" 
 
       - name: Upload screenshots
         if: always()
