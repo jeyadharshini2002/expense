@@ -51,7 +51,7 @@ class TestBase(unittest.TestCase):
 
             
             # Add options for better stability
-            # chrome_options.add_argument("--headless=new")
+            chrome_options.add_argument("--headless=new")
 
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-popup-blocking")
