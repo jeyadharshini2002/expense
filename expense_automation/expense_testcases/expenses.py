@@ -3,6 +3,7 @@ import time
 from faker import Faker
 from datetime import datetime
 from datetime import date
+
 from logger_file import get_logger
 from locators import Locators
 from selenium.webdriver.support.ui import WebDriverWait
@@ -55,7 +56,6 @@ class Expenses(BasePage,unittest.TestCase):
             self.fail("Search for 'water can' did not return expected result.")
 
     def test_valid_income_add(self):
-        from datetime import datetime
 
         self.click(Locators.EXPENSES_ADD_INCOME_BT)
 
@@ -94,7 +94,8 @@ class Expenses(BasePage,unittest.TestCase):
 
         # Click Save
         self.click(Locators.EXPENSES_INCOME_SAVE)
-        self.driver.save_screenshot("after_save_click.png")
+        os.makedirs("screenshots", exist_ok=True)
+        self.driver.save_screenshot("screenshots/after_save_click.png")
         time.sleep(6)
 
         # Wait for and verify toast/snackbar
@@ -102,12 +103,15 @@ class Expenses(BasePage,unittest.TestCase):
             toast = WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
-            self.driver.save_screenshot("toast_visible.png")
+            self.driver.save_screenshot("screenshots/Toast_visible.png")
             assert "Income saved successfully!" in toast.text
         except Exception as e:
-            self.fail(f"Toast not Came: {e}") 
-            self.driver.save_screenshot("Toast_notvisible.png")
-
+            self.driver.save_screenshot("screenshots/Toast_notvisible.png")
+            toasts = self.driver.find_elements(By.XPATH, "//*[contains(text(), 'Income saved successfully!')]")
+            if any("Income saved successfully!" in t.text for t in toasts):
+                print("Toast was present but not caught in wait.")
+            else:
+                self.fail(f"Toast not Came: {e}")
 
 
             
