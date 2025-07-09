@@ -16380,3 +16380,63 @@ Date and Time: 09-Jul-25 05:58:13 PM - INFO - AllTests.e_login_without_username 
 Date and Time: 09-Jul-25 05:58:13 PM - INFO - AllTests.f_login_successful - Line number: 103 : Starting test: f_login_successful
 Date and Time: 09-Jul-25 05:58:20 PM - INFO - LoginPage - Line number: 138 : Login successful, no error message found.
 Date and Time: 09-Jul-25 05:58:20 PM - INFO - LoginPage - Line number: 144 : Login successful.
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.f_login_successful - Line number: 109 : Completed test: f_login_successful
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_balance_calculation - Line number: 103 : Starting test: test_dashboard_balance_calculation
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_balance_calculation - Line number: 109 : Completed test: test_dashboard_balance_calculation
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_balance_non_negative - Line number: 103 : Starting test: test_dashboard_balance_non_negative
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_balance_non_negative - Line number: 109 : Completed test: test_dashboard_balance_non_negative
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_amounts_displayed - Line number: 103 : Starting test: test_dashboard_amounts_displayed
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_dashboard_amounts_displayed - Line number: 109 : Completed test: test_dashboard_amounts_displayed
+Date and Time: 09-Jul-25 05:58:22 PM - INFO - AllTests.test_02_category_tab - Line number: 103 : Starting test: test_02_category_tab
+Date and Time: 09-Jul-25 05:58:24 PM - INFO - AllTests.test_02_category_tab - Line number: 109 : Completed test: test_02_category_tab
+Date and Time: 09-Jul-25 05:58:24 PM - INFO - AllTests.test_03_create_new_category - Line number: 103 : Starting test: test_03_create_new_category
+Date and Time: 09-Jul-25 05:58:29 PM - INFO - Category - Line number: 50 : Category created successfully!
+Date and Time: 09-Jul-25 05:58:29 PM - INFO - AllTests.test_03_create_new_category - Line number: 109 : Completed test: test_03_create_new_category
+Date and Time: 09-Jul-25 05:58:29 PM - INFO - AllTests.test_04_empty_category_name - Line number: 103 : Starting test: test_04_empty_category_name
+Date and Time: 09-Jul-25 05:58:40 PM - WARNING - Category - Line number: 67 : Category is showing required message.
+Date and Time: 09-Jul-25 05:58:40 PM - INFO - AllTests.test_04_empty_category_name - Line number: 109 : Completed test: test_04_empty_category_name
+Date and Time: 09-Jul-25 05:58:40 PM - INFO - AllTests.test_05_category_whitespace_only - Line number: 103 : Starting test: test_05_category_whitespace_only
+Date and Time: 09-Jul-25 05:58:51 PM - WARNING - Category - Line number: 83 : Category is showing required message on white space.
+Date and Time: 09-Jul-25 05:58:52 PM - INFO - AllTests.test_05_category_whitespace_only - Line number: 109 : Completed test: test_05_category_whitespace_only
+Date and Time: 09-Jul-25 05:58:52 PM - INFO - AllTests.test_06_invalid_category_name - Line number: 103 : Starting test: test_06_invalid_category_name
+Date and Time: 09-Jul-25 05:58:55 PM - ERROR - Category - Line number: 98 : Category is  not shown Error message on Invalid Name.
+Date and Time: 09-Jul-25 05:58:55 PM - INFO - AllTests.test_06_invalid_category_name - Line number: 109 : Completed test: test_06_invalid_category_name
+Date and Time: 09-Jul-25 05:58:55 PM - INFO - AllTests.test_07_duplicate_category_name - Line number: 103 : Starting test: test_07_duplicate_category_name
+Date and Time: 09-Jul-25 05:59:08 PM - WARNING - Category - Line number: 128 : Allready Existing category is not adding Again, showing required message.
+Date and Time: 09-Jul-25 05:59:08 PM - INFO - AllTests.test_07_duplicate_category_name - Line number: 109 : Completed test: test_07_duplicate_category_name
+Date and Time: 09-Jul-25 05:59:08 PM - INFO - AllTests.test_08_long_category_name - Line number: 103 : Starting test: test_08_long_category_name
+Date and Time: 09-Jul-25 05:59:08 PM - INFO - Category - Line number: 135 : Testing with long category name of length 300
+Date and Time: 09-Jul-25 05:59:21 PM - WARNING - Category - Line number: 157 : Above 250 characters not accepted, exception raised or not found in table.
+Date and Time: 09-Jul-25 05:59:21 PM - DEBUG - Category - Line number: 158 : Exception details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x4244a3+62419]
+	GetHandleVerifier [0x0x4244e4+62484]
+	(No symbol) [0x0x262133]
+	(No symbol) [0x0x2aa8fe]
+	(No symbol) [0x0x2aac9b]
+	(No symbol) [0x0x2f3052]
+	(No symbol) [0x0x2cf4b4]
+	(No symbol) [0x0x2f087a]
+	(No symbol) [0x0x2cf266]
+	(No symbol) [0x0x29e852]
+	(No symbol) [0x0x29f6f4]
+	GetHandleVerifier [0x0x694793+2619075]
+	GetHandleVerifier [0x0x68fbaa+2599642]
+	GetHandleVerifier [0x0x44b04a+221050]
+	GetHandleVerifier [0x0x43b2c8+156152]
+	GetHandleVerifier [0x0x441c7d+183213]
+	GetHandleVerifier [0x0x42c388+94904]
+	GetHandleVerifier [0x0x42c512+95298]
+	GetHandleVerifier [0x0x41766a+9626]
+	BaseThreadInitThunk [0x0x75385d49+25]
+	RtlInitializeExceptionChain [0x0x76fad1ab+107]
+	RtlGetAppContainerNamedObjectPath [0x0x76fad131+561]
+
+Date and Time: 09-Jul-25 05:59:24 PM - INFO - AllTests.test_08_long_category_name - Line number: 109 : Completed test: test_08_long_category_name
+Date and Time: 09-Jul-25 05:59:24 PM - INFO - AllTests.test_09_edit_category - Line number: 103 : Starting test: test_09_edit_category
+Date and Time: 09-Jul-25 05:59:25 PM - INFO - Category - Line number: 175 : Category updated successfully.
+Date and Time: 09-Jul-25 05:59:25 PM - INFO - AllTests.test_09_edit_category - Line number: 109 : Completed test: test_09_edit_category
+Date and Time: 09-Jul-25 05:59:25 PM - INFO - AllTests.test_10_edit_category_empty_name - Line number: 103 : Starting test: test_10_edit_category_empty_name
+Date and Time: 09-Jul-25 05:59:35 PM - WARNING - Category - Line number: 194 : Category is showing required message.
+Date and Time: 09-Jul-25 05:59:35 PM - INFO - AllTests.test_10_edit_category_empty_name - Line number: 109 : Completed test: test_10_edit_category_empty_name
+Date and Time: 09-Jul-25 05:59:35 PM - INFO - AllTests.test_11_edit_to_duplicate_category_name - Line number: 103 : Starting test: test_11_edit_to_duplicate_category_name
