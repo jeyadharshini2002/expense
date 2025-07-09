@@ -1,5 +1,7 @@
 import unittest
 import os
+import io
+import builtins
 from expense_testcases.authentication.login import LoginPage
 from expense_testcases.category import Category
 from expense_testcases.subcategory import SubCategory
@@ -10,6 +12,27 @@ from expense_testcases.expense_report import exp_report
 from expense_testcases.categorywiseledger import category_ledger
 from expense_testcases.authentication.logout import Logout
 from expense_testcases.dashboard import TestDashboard
+from test_base import TestBase
+import HtmlTestRunner.result
+
+
+# === Monkey patch to fix traceback level ===
+def _count_relevant_tb_levels(self, tb):
+    length = 0
+    while tb and not self._is_relevant_tb_level(tb):
+        tb = tb.tb_next
+        length += 1
+    return length
+
+HtmlTestRunner.result.HtmlTestResult._count_relevant_tb_levels = _count_relevant_tb_levels
+
+# === Monkey patch to fix UnicodeEncodeError ===
+original_open = open
+def utf8_open(*args, **kwargs):
+    if len(args) >= 1 and args[0].endswith(".html"):
+        kwargs["encoding"] = "utf-8"
+    return original_open(*args, **kwargs)
+builtins.open = utf8_open  # Apply patch
 
 class SanityTests(TestBase):
     """
@@ -37,8 +60,7 @@ class SanityTests(TestBase):
         """
         super().setUp()
 
-    def setUp(self) -> None:
-        super().setUp()
+
 
     def f_login_successful(self):
         self.login.f_login_successful()
@@ -107,14 +129,9 @@ class SanityTests(TestBase):
 
 
 if __name__ == "__main__":
-    # Get current directory
     current_dir = os.path.dirname(os.path.abspath(__file__))
     REPORT_DIR = os.path.join(current_dir, 'reports')
-
-    # Create reports directory if it doesn't exist
-    if not os.path.exists(REPORT_DIR):
-        os.makedirs(REPORT_DIR)
-        print(f"[DEBUG] Created reports directory: {REPORT_DIR}")
+    os.makedirs(REPORT_DIR, exist_ok=True)
 
     print(f"[DEBUG] Report will be generated at: {REPORT_DIR}")
 
@@ -143,14 +160,17 @@ if __name__ == "__main__":
         output=REPORT_DIR,
         report_name='Sanity_test_Report',
         combine_reports=True,
-        add_timestamp=True,
+        # add_timestamp=True,
         verbosity=2
     )
 
     print(f"[DEBUG] Starting test execution with single Chrome session...")
     result = runner.run(suite)
 
-    # List generated reports
+    # === Restore original open function ===
+    builtins.open = original_open
+
+    # === Print generated report info ===
     if os.path.exists(REPORT_DIR):
         print(f"[DEBUG] Generated reports:")
         for file in os.listdir(REPORT_DIR):
@@ -159,8 +179,13 @@ if __name__ == "__main__":
                 print(f"  - {file}")
                 print(f"    Full path: {full_path}")
 
+    # === Test summary ===
     print(f"[DEBUG] Test execution completed!")
     print(f"[DEBUG] Tests run: {result.testsRun}")
     print(f"[DEBUG] Failures: {len(result.failures)}")
     print(f"[DEBUG] Errors: {len(result.errors)}")
-    print(f"[DEBUG] Success rate: {((result.testsRun - len(result.failures) - len(result.errors)) / result.testsRun) * 100:.1f}%")
+    if result.testsRun > 0:
+        success_rate = ((result.testsRun - len(result.failures) - len(result.errors)) / result.testsRun) * 100
+        print(f"[DEBUG] Success rate: {success_rate:.1f}%")
+    else:
+        print("[DEBUG] No tests were run. Success rate: 0.0%")

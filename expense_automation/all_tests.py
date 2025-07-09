@@ -55,9 +55,6 @@ class AllTests(TestBase):
         """
         super().setUp()
 
-    def setUp(self) -> None:
-        super().setUp()
-
     def test_01_login_invalid_credentials(self):
         self.login.a_login_invalid_credentials()
 
