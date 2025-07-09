@@ -91,12 +91,12 @@ class Expenses(BasePage,unittest.TestCase):
         except Exception as e:
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
-
+        os.makedirs("screenshots", exist_ok=True)
         self.driver.save_screenshot("screenshots/before_save_click.png")
 
         # Click Save
         self.click(Locators.EXPENSES_INCOME_SAVE)
-        os.makedirs("screenshots", exist_ok=True)
+       
         self.driver.save_screenshot("screenshots/after_save_click.png")
         time.sleep(6)
 
