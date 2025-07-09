@@ -16440,3 +16440,33 @@ Date and Time: 09-Jul-25 05:59:25 PM - INFO - AllTests.test_10_edit_category_emp
 Date and Time: 09-Jul-25 05:59:35 PM - WARNING - Category - Line number: 194 : Category is showing required message.
 Date and Time: 09-Jul-25 05:59:35 PM - INFO - AllTests.test_10_edit_category_empty_name - Line number: 109 : Completed test: test_10_edit_category_empty_name
 Date and Time: 09-Jul-25 05:59:35 PM - INFO - AllTests.test_11_edit_to_duplicate_category_name - Line number: 103 : Starting test: test_11_edit_to_duplicate_category_name
+Date and Time: 09-Jul-25 05:59:46 PM - WARNING - Category - Line number: 213 : Allready Existing category is not adding Again, showing required message during Edit.
+Date and Time: 09-Jul-25 05:59:46 PM - INFO - AllTests.test_11_edit_to_duplicate_category_name - Line number: 109 : Completed test: test_11_edit_to_duplicate_category_name
+Date and Time: 09-Jul-25 05:59:46 PM - INFO - AllTests.test_12_delete_category - Line number: 103 : Starting test: test_12_delete_category
+Date and Time: 09-Jul-25 05:59:48 PM - INFO - Category - Line number: 240 : Toast message found in page source.
+Date and Time: 09-Jul-25 05:59:48 PM - INFO - AllTests.test_12_delete_category - Line number: 109 : Completed test: test_12_delete_category
+Date and Time: 09-Jul-25 05:59:48 PM - INFO - AllTests.test_13_category_snackbar_add - Line number: 103 : Starting test: test_13_category_snackbar_add
+Date and Time: 09-Jul-25 05:59:53 PM - INFO - Category - Line number: 262 : Snackbar message displayed: Category created successfully!
+Date and Time: 09-Jul-25 05:59:53 PM - INFO - AllTests.test_13_category_snackbar_add - Line number: 109 : Completed test: test_13_category_snackbar_add
+Date and Time: 09-Jul-25 05:59:53 PM - INFO - AllTests.test_14_category_snackbar_edit - Line number: 103 : Starting test: test_14_category_snackbar_edit
+Date and Time: 09-Jul-25 06:00:04 PM - ERROR - Category - Line number: 304 : Snackbar message not displayed after Updating category.
+Date and Time: 09-Jul-25 06:00:04 PM - INFO - AllTests.test_14_category_snackbar_edit - Line number: 109 : Completed test: test_14_category_snackbar_edit
+Date and Time: 09-Jul-25 06:00:04 PM - INFO - AllTests.test_15_subcategory_tab - Line number: 103 : Starting test: test_15_subcategory_tab
+Date and Time: 09-Jul-25 06:00:06 PM - INFO - AllTests.test_15_subcategory_tab - Line number: 109 : Completed test: test_15_subcategory_tab
+Date and Time: 09-Jul-25 06:00:06 PM - INFO - AllTests.test_16_create_new_subcategory - Line number: 103 : Starting test: test_16_create_new_subcategory
+Date and Time: 09-Jul-25 06:00:21 PM - INFO - AllTests.test_16_create_new_subcategory - Line number: 109 : Completed test: test_16_create_new_subcategory
+Date and Time: 09-Jul-25 06:00:21 PM - INFO - AllTests.test_17_empty_subcategory_name - Line number: 103 : Starting test: test_17_empty_subcategory_name
+Date and Time: 09-Jul-25 06:00:31 PM - INFO - AllTests.test_17_empty_subcategory_name - Line number: 109 : Completed test: test_17_empty_subcategory_name
+Date and Time: 09-Jul-25 06:00:31 PM - INFO - AllTests.test_18_whitespace_subcategory_name - Line number: 103 : Starting test: test_18_whitespace_subcategory_name
+Date and Time: 09-Jul-25 06:00:41 PM - INFO - AllTests.test_18_whitespace_subcategory_name - Line number: 109 : Completed test: test_18_whitespace_subcategory_name
+Date and Time: 09-Jul-25 06:00:41 PM - INFO - AllTests.test_19_invalid_subcategory_name - Line number: 103 : Starting test: test_19_invalid_subcategory_name
+Date and Time: 09-Jul-25 06:00:51 PM - INFO - AllTests.test_19_invalid_subcategory_name - Line number: 109 : Completed test: test_19_invalid_subcategory_name
+Date and Time: 09-Jul-25 06:00:51 PM - INFO - AllTests.test_20_duplicate_subcategory_name - Line number: 103 : Starting test: test_20_duplicate_subcategory_name
+Date and Time: 09-Jul-25 06:01:01 PM - INFO - AllTests.test_20_duplicate_subcategory_name - Line number: 109 : Completed test: test_20_duplicate_subcategory_name
+Date and Time: 09-Jul-25 06:01:01 PM - INFO - AllTests.test_21_subcategory_without_category - Line number: 103 : Starting test: test_21_subcategory_without_category
+Date and Time: 09-Jul-25 06:01:11 PM - INFO - AllTests.test_21_subcategory_without_category - Line number: 109 : Completed test: test_21_subcategory_without_category
+Date and Time: 09-Jul-25 06:01:11 PM - INFO - AllTests.test_22_long_subcategory_name - Line number: 103 : Starting test: test_22_long_subcategory_name
+Date and Time: 09-Jul-25 06:01:21 PM - INFO - AllTests.test_22_long_subcategory_name - Line number: 109 : Completed test: test_22_long_subcategory_name
+Date and Time: 09-Jul-25 06:01:21 PM - INFO - AllTests.test_23_edit_subcategory - Line number: 103 : Starting test: test_23_edit_subcategory
+Date and Time: 09-Jul-25 06:01:31 PM - INFO - AllTests.test_23_edit_subcategory - Line number: 109 : Completed test: test_23_edit_subcategory
+Date and Time: 09-Jul-25 06:01:31 PM - INFO - AllTests.test_24_edit_subcategory_empty_name - Line number: 103 : Starting test: test_24_edit_subcategory_empty_name
