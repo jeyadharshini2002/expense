@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from logger_file import get_logger
 import tempfile
+import platform
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import tempfile
@@ -50,7 +51,7 @@ class TestBase(unittest.TestCase):
 
             
             # Add options for better stability
-            chrome_options.add_argument("--headless=new")
+            # chrome_options.add_argument("--headless=new")
 
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-popup-blocking")

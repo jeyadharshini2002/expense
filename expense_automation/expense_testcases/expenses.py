@@ -21,6 +21,7 @@ import random
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
+import os
 from selenium.common.exceptions import TimeoutException
 class Expenses(BasePage,unittest.TestCase):
     """
@@ -60,35 +61,52 @@ class Expenses(BasePage,unittest.TestCase):
         self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY,1)
         self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY,1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
-        self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid Expense")
-        # ✅ Wait and locate the file input
+        self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid income")
+        #  Wait and locate the file input
         try:
-            # Debug list of file inputs
+            # Step 1: Locate all file inputs
             inputs = self.driver.find_elements(By.XPATH, "//input[@type='file']")
             print("Found file inputs:", len(inputs))
             for i, el in enumerate(inputs):
                 print(f"{i}: id={el.get_attribute('id')}, name={el.get_attribute('name')}")
 
+            # Step 2: Wait for the file input to appear
             file_input = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))  # fallback generic
+                EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
             )
 
-            # Make it visible
+            # Step 3: Make it interactable
             self.driver.execute_script("""
                 arguments[0].style.display = 'block';
                 arguments[0].style.visibility = 'visible';
                 arguments[0].style.opacity = 1;
             """, file_input)
 
-            file_path = r"../expense_automation/screenshot.png"
-            file_input.send_keys(file_path)
+            # Step 4: Construct the absolute path to your file
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.abspath(os.path.join(current_dir, "../screenshot.png"))
 
+            # Step 5: Send the file to the input
+            if os.path.exists(file_path):
+                file_input.send_keys(file_path)
+                print("Resolved file path:", file_path)
+                print("File uploaded successfully.")
+            else:
+                raise FileNotFoundError(f"File not found at path: {file_path}")
+
+            # Optional: Wait for some indication of successful upload (e.g., preview, filename display)
+            # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'screenshot.png')]")))
 
         except Exception as e:
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
+
+        # Step 6: Final delay (optional, not ideal in real automation—prefer a proper wait)
         time.sleep(3)
+
+        # Step 7: Click save button
         self.click(Locators.EXPENSES_INCOME_SAVE)
+
         
 
         try:
