@@ -573,7 +573,7 @@ class Expenses(BasePage,unittest.TestCase):
 
         try:
             toast = WebDriverWait(self.driver, 3).until(
-                EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Expense deleted successfully!')]"))
+                EC.presence_of_element_located((By.XPATH, "(//a[normalize-space()='Add Income'])[1]"))
             )
             assert "Expense deleted successfully!" in toast.text
             self.logger.info("Expense deleted successfully after edit.")

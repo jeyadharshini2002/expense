@@ -1,18 +1,20 @@
 import unittest
 import os
+import io
+import builtins
+import HtmlTestRunner
 from expense_testcases.authentication.login import LoginPage
 from expense_testcases.category import Category
 from expense_testcases.subcategory import SubCategory
-import HtmlTestRunner
 from expense_testcases.expenses import Expenses
-from test_base import TestBase
 from expense_testcases.expense_report import exp_report
 from expense_testcases.categorywiseledger import category_ledger
 from expense_testcases.authentication.logout import Logout
 from expense_testcases.dashboard import TestDashboard
+from test_base import TestBase
 import HtmlTestRunner.result
 
-# Monkey patch to fix AttributeError in HtmlTestRunner
+# === Monkey patch to fix traceback level ===
 def _count_relevant_tb_levels(self, tb):
     length = 0
     while tb and not self._is_relevant_tb_level(tb):
@@ -22,25 +24,30 @@ def _count_relevant_tb_levels(self, tb):
 
 HtmlTestRunner.result.HtmlTestResult._count_relevant_tb_levels = _count_relevant_tb_levels
 
+# === Monkey patch to fix UnicodeEncodeError ===
+original_open = open
+def utf8_open(*args, **kwargs):
+    if len(args) >= 1 and args[0].endswith(".html"):
+        kwargs["encoding"] = "utf-8"
+    return original_open(*args, **kwargs)
+builtins.open = utf8_open  # Apply patch
+
+# === Test Class ===
 class AllTests(TestBase):
-    """
-    Run all test cases here - Single Chrome session for all tests
-    """
+    """Run all test cases in a single Chrome session"""
 
     @classmethod
     def setUpClass(cls):
-        """
-        Initialize Chrome driver and page objects once for all tests
-        """
         super().setUpClass()
         cls.login = LoginPage(cls.driver)
-        cls.dash = TestDashboard(cls.driver)  # Use TestDashboard for dashboard tests
+        cls.dash = TestDashboard(cls.driver)
         cls.configu = Category(cls.driver)
         cls.subconfigu = SubCategory(cls.driver)
         cls.expenses = Expenses(cls.driver)
-        cls.expreport= exp_report(cls.driver)
+        cls.expreport = exp_report(cls.driver)
         cls.category_ledger = category_ledger(cls.driver)
-        cls.out= Logout(cls.driver)  # Reuse the logout method from LoginPage
+        cls.out = Logout(cls.driver)
+
 
     def setUp(self) -> None:
         """
@@ -241,16 +248,11 @@ class AllTests(TestBase):
 
     
 
-
+# === Main Runner ===
 if __name__ == "__main__":
-    # Get current directory
     current_dir = os.path.dirname(os.path.abspath(__file__))
     REPORT_DIR = os.path.join(current_dir, 'reports')
-
-    # Create reports directory if it doesn't exist
-    if not os.path.exists(REPORT_DIR):
-        os.makedirs(REPORT_DIR)
-        print(f"[DEBUG] Created reports directory: {REPORT_DIR}")
+    os.makedirs(REPORT_DIR, exist_ok=True)
 
     print(f"[DEBUG] Report will be generated at: {REPORT_DIR}")
 
@@ -333,9 +335,7 @@ if __name__ == "__main__":
     suite.addTest(AllTests('test_53_totals_calculation'))
     suite.addTest(AllTests('test_54_export_category_ledger_to_excel'))
     suite.addTest(AllTests('logout'))
-
-
-    # Run tests with HTML report
+    # === Run HTMLTestRunner ===
     runner = HtmlTestRunner.HTMLTestRunner(
         output=REPORT_DIR,
         report_name='Expense_Automation_Report',
@@ -347,7 +347,10 @@ if __name__ == "__main__":
     print(f"[DEBUG] Starting test execution with single Chrome session...")
     result = runner.run(suite)
 
-    # List generated reports
+    # === Restore original open function ===
+    builtins.open = original_open
+
+    # === Print generated report info ===
     if os.path.exists(REPORT_DIR):
         print(f"[DEBUG] Generated reports:")
         for file in os.listdir(REPORT_DIR):
@@ -356,6 +359,7 @@ if __name__ == "__main__":
                 print(f"  - {file}")
                 print(f"    Full path: {full_path}")
 
+    # === Test summary ===
     print(f"[DEBUG] Test execution completed!")
     print(f"[DEBUG] Tests run: {result.testsRun}")
     print(f"[DEBUG] Failures: {len(result.failures)}")
@@ -365,5 +369,3 @@ if __name__ == "__main__":
         print(f"[DEBUG] Success rate: {success_rate:.1f}%")
     else:
         print("[DEBUG] No tests were run. Success rate: 0.0%")
-
-
