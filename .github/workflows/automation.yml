@@ -37,18 +37,20 @@ jobs:
         with:
           name: html-reports
           path: expense_automation/reports/*.html
+
+      - name: List PNG files
+        if: failure()
+        run: |
+          echo "Searching for screenshots:"
+          find . -name '*.png' || echo "No PNG files found" 
+
+
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: test-failures
-          path: screenshots/
-      - name: List PNG files
-        if: failure()
-        run: |
-          echo "Showing current directory:"
-          pwd
-          echo "Showing PNG files in /screenshots"
-          dir screenshots || echo "No screenshots found"
+          path: '**/screenshots/'
+                
 
 
