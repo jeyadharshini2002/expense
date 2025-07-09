@@ -65,6 +65,7 @@ class Expenses(BasePage,unittest.TestCase):
             fake.date_between_dates(date_start=datetime(1900, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y")
         )
         self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY, 1)
+        time.sleep(3)
         self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid income")
