@@ -106,6 +106,7 @@ class Expenses(BasePage,unittest.TestCase):
 
         # Step 7: Click save button
         self.click(Locators.EXPENSES_INCOME_SAVE)
+        time.sleep(6)
 
         
 
