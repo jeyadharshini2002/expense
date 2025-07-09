@@ -16360,3 +16360,23 @@ Date and Time: 09-Jul-25 05:27:17 PM - INFO - Logout - Line number: 43 : Logout 
 Date and Time: 09-Jul-25 05:27:17 PM - INFO - AllTests.logout - Line number: 109 : Completed test: logout
 Date and Time: 09-Jul-25 05:27:17 PM - INFO - AllTests - Line number: 86 : Closing browser after all tests completed
 Date and Time: 09-Jul-25 05:27:19 PM - INFO - AllTests - Line number: 88 : Browser closed and driver quit successfully
+Date and Time: 09-Jul-25 05:57:57 PM - INFO - AllTests - Line number: 34 : Setting up Chrome driver for all tests
+Date and Time: 09-Jul-25 05:58:01 PM - INFO - AllTests - Line number: 73 : Browser initialized and navigated to https://dev.mehainfotech.com/expense-manager
+Date and Time: 09-Jul-25 05:58:01 PM - INFO - AllTests.test_01_login_invalid_credentials - Line number: 103 : Starting test: test_01_login_invalid_credentials
+Date and Time: 09-Jul-25 05:58:03 PM - WARNING - LoginPage - Line number: 44 : Invalid credentials entered.
+Date and Time: 09-Jul-25 05:58:03 PM - INFO - AllTests.test_01_login_invalid_credentials - Line number: 109 : Completed test: test_01_login_invalid_credentials
+Date and Time: 09-Jul-25 05:58:03 PM - INFO - AllTests.b_login_invalid_password - Line number: 103 : Starting test: b_login_invalid_password
+Date and Time: 09-Jul-25 05:58:06 PM - WARNING - LoginPage - Line number: 65 : Invalid password entered.
+Date and Time: 09-Jul-25 05:58:06 PM - INFO - AllTests.b_login_invalid_password - Line number: 109 : Completed test: b_login_invalid_password
+Date and Time: 09-Jul-25 05:58:06 PM - INFO - AllTests.c_login_invalid_username - Line number: 103 : Starting test: c_login_invalid_username
+Date and Time: 09-Jul-25 05:58:08 PM - WARNING - LoginPage - Line number: 85 : Invalid username entered.
+Date and Time: 09-Jul-25 05:58:08 PM - INFO - AllTests.c_login_invalid_username - Line number: 109 : Completed test: c_login_invalid_username
+Date and Time: 09-Jul-25 05:58:08 PM - INFO - AllTests.d_login_without_password - Line number: 103 : Starting test: d_login_without_password
+Date and Time: 09-Jul-25 05:58:11 PM - WARNING - LoginPage - Line number: 102 : Password not entered.
+Date and Time: 09-Jul-25 05:58:11 PM - INFO - AllTests.d_login_without_password - Line number: 109 : Completed test: d_login_without_password
+Date and Time: 09-Jul-25 05:58:11 PM - INFO - AllTests.e_login_without_username - Line number: 103 : Starting test: e_login_without_username
+Date and Time: 09-Jul-25 05:58:13 PM - WARNING - LoginPage - Line number: 119 : Username not entered.
+Date and Time: 09-Jul-25 05:58:13 PM - INFO - AllTests.e_login_without_username - Line number: 109 : Completed test: e_login_without_username
+Date and Time: 09-Jul-25 05:58:13 PM - INFO - AllTests.f_login_successful - Line number: 103 : Starting test: f_login_successful
+Date and Time: 09-Jul-25 05:58:20 PM - INFO - LoginPage - Line number: 138 : Login successful, no error message found.
+Date and Time: 09-Jul-25 05:58:20 PM - INFO - LoginPage - Line number: 144 : Login successful.
