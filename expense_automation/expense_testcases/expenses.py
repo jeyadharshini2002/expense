@@ -56,71 +56,58 @@ class Expenses(BasePage,unittest.TestCase):
 
     def test_valid_income_add(self):
         self.click(Locators.EXPENSES_ADD_INCOME_BT)
+
         fake = Faker()
-        self.enter_text(Locators.EXPENSES_INCOME_DATE, Faker().date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y"))
-        self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY,1)
-        self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY,1)
+        self.enter_text(
+            Locators.EXPENSES_INCOME_DATE,
+            fake.date_between_dates(date_start=datetime(2000, 1, 1), date_end=datetime(2020, 12, 31)).strftime("%m-%d-%Y")
+        )
+        self.dropdown_click(Locators.EXPENSES_INCOME_CATEGORY, 1)
+        self.dropdown_click(Locators.EXPENSES_INCOME_SUBCATEGORY, 1)
         self.enter_text(Locators.EXPENSES_INCOME_AMOUNT, "1000")
         self.enter_text(Locators.EXPENSES_INCOME_NOTES, "Valid income")
-        #  Wait and locate the file input
-        try:
-            # Step 1: Locate all file inputs
-            inputs = self.driver.find_elements(By.XPATH, "//input[@type='file']")
-            print("Found file inputs:", len(inputs))
-            for i, el in enumerate(inputs):
-                print(f"{i}: id={el.get_attribute('id')}, name={el.get_attribute('name')}")
 
-            # Step 2: Wait for the file input to appear
+        try:
+            # Locate and upload file
             file_input = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
             )
 
-            # Step 3: Make it interactable
             self.driver.execute_script("""
                 arguments[0].style.display = 'block';
                 arguments[0].style.visibility = 'visible';
                 arguments[0].style.opacity = 1;
             """, file_input)
 
-            # Step 4: Construct the absolute path to your file
             current_dir = os.path.dirname(os.path.abspath(__file__))
             file_path = os.path.abspath(os.path.join(current_dir, "../screenshot.png"))
 
-            # Step 5: Send the file to the input
             if os.path.exists(file_path):
                 file_input.send_keys(file_path)
-                print("Resolved file path:", file_path)
-                print("File uploaded successfully.")
             else:
-                raise FileNotFoundError(f"File not found at path: {file_path}")
-
-            # Optional: Wait for some indication of successful upload (e.g., preview, filename display)
-            # WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'screenshot.png')]")))
-
+                raise FileNotFoundError(f"File not found: {file_path}")
         except Exception as e:
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
 
-        # Step 6: Final delay (optional, not ideal in real automation—prefer a proper wait)
         time.sleep(3)
-
-        # Step 7: Click save button
         self.click(Locators.EXPENSES_INCOME_SAVE)
-        time.sleep(6)
 
-        
-
+        # Wait for toast
         try:
-            toast = WebDriverWait(self.driver, 10).until(  # increase from 3 to 10 seconds
+            toast = WebDriverWait(self.driver, 15).until(  # wait longer in CI
                 EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
+            print("Toast message received:", toast.text)
             assert "Income saved successfully!" in toast.text
-        except Exception as e:
-            self.driver.save_screenshot("expense_save_failed.png")
-            with open("page_source_after_fail.html", "w", encoding="utf-8") as f:
-                f.write(self.driver.page_source)
-            raise AssertionError("Snackbar not found or message incorrect") from e
 
+        except Exception as e:
+            # Save artifacts for GitHub CI debugging
+            self.driver.save_screenshot("income_toast_failure.png")
+            with open("income_toast_page_source.html", "w", encoding="utf-8") as f:
+                f.write(self.driver.page_source)
+            print("Page source and screenshot saved after toast failure.")
+            raise AssertionError("Snackbar not found or message incorrect") from e
 
             
     def test_income_empty_required_fields_add(self):
