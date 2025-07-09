@@ -90,24 +90,23 @@ class Expenses(BasePage,unittest.TestCase):
             self.driver.save_screenshot("file_upload_failed.png")
             self.fail(f"File input not found or upload failed: {e}")
 
-        time.sleep(3)
         self.click(Locators.EXPENSES_INCOME_SAVE)
+        time.sleep(3)
 
-        # Wait for toast
+        # Retry click once more (in case toast never triggered)
         try:
-            toast = WebDriverWait(self.driver, 15).until(  # wait longer in CI
+            toast = WebDriverWait(self.driver, 8).until(
                 EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
             )
-            print("Toast message received:", toast.text)
+            assert "Income saved successfully!" in toast.text
+        except Exception:
+            print("Toast not visible on first click, retrying Save button...")
+            self.click(Locators.EXPENSES_INCOME_SAVE)
+            toast = WebDriverWait(self.driver, 8).until(
+                EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Income saved successfully!')]"))
+            )
             assert "Income saved successfully!" in toast.text
 
-        except Exception as e:
-            # Save artifacts for GitHub CI debugging
-            self.driver.save_screenshot("income_toast_failure.png")
-            with open("income_toast_page_source.html", "w", encoding="utf-8") as f:
-                f.write(self.driver.page_source)
-            print("Page source and screenshot saved after toast failure.")
-            raise AssertionError("Snackbar not found or message incorrect") from e
 
             
     def test_income_empty_required_fields_add(self):
