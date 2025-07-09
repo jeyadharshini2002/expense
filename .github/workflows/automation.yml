@@ -38,12 +38,6 @@ jobs:
           name: html-report
           path: expense_automation/reports/*.html
 
-          
-      - name: Show report directory contents
-        run: |
-          echo "Listing contents of reports/"
-          dir reports
-
 
 
       - name: Upload screenshots
