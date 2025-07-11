@@ -38,7 +38,13 @@ jobs:
           name: html-report
           path: expense_automation/reports/*.html
 
-
+      
+      - name: Upload Excel Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: excel-report
+          path: expense_automation/reports/*.xlsx
 
       - name: Upload screenshots
         if: always()
