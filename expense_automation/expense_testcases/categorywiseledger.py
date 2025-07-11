@@ -45,6 +45,15 @@ class category_ledger(BasePage,unittest.TestCase):
         time.sleep(5)
         self.click(Locators.CATEGORY_WISE_LEDGER_SIDEBAR)
         time.sleep(2)
+
+    def catledger_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h4[normalize-space()='Categorywise Ledger'])[1]").text
+            assert "Categorywise Ledger" in header, "Header text does not contain 'Categorywise Ledger'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+  
     def test_filter_by_date(self):
         self.click(Locators.CATEGORY_WISE_LEDGER_SIDEBAR)
         self.enter_text(Locators.CATEGORY_WISE_LEDGER_STARTDATE, "01-07-2025")

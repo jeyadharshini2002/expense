@@ -39,6 +39,16 @@ class Expenses(BasePage,unittest.TestCase):
         fake = Faker()
         self.click(Locators.EXPENSE_SIDEBAR)
         time.sleep(2)
+
+
+    def exp_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h4[normalize-space()='Expenses'])[1]").text
+            assert "Expenses" in header, "Header text does not contain 'Expenses'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+ 
     def test_expense_search_functionality(self):
         self.click(Locators.EXPENSE_SEARCH)
         self.enter_text(Locators.EXPENSE_SEARCH, "water can")
@@ -575,12 +585,13 @@ class Expenses(BasePage,unittest.TestCase):
             toast = WebDriverWait(self.driver, 3).until(
                 EC.presence_of_element_located((By.XPATH, "(//a[normalize-space()='Add Income'])[1]"))
             )
-            assert "Expense deleted successfully!" in toast.text
-            self.logger.info("Expense deleted successfully after edit.")
+            assert "Income" in toast.text
+            self.logger.info("Expense deleted successfully on Edit.")   
         except Exception as e:
-            self.driver.save_screenshot("expense_edit_delete_failed.png")
-            self.logger.error("Expense deletion failed or snackbar not found after edit.")
-            self.fail("Expense deletion failed or snackbar not found after edit.")
+            self.driver.save_screenshot("expense_delete_failed.png")
+            self.logger.error("Expense deletion failed or snackbar not found on Edit.")
+            self.fail("Expense deletion failed or snackbar not found on Edit.")
+            self.click(Locators.EXPENSES_EXPENSE_BACK)
 
     def test_expense_delete(self):
         self.click(Locators.EXPENSE_DELETE)

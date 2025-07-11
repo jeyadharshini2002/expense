@@ -15,7 +15,8 @@ from expense_testcases.authentication.logout import Logout
 from expense_testcases.dashboard import TestDashboard
 from test_base import TestBase
 import HtmlTestRunner.result
-
+from openpyxl import Workbook
+from datetime import datetime
 
 # === Monkey patch to fix traceback level ===
 def _count_relevant_tb_levels(self, tb):
@@ -66,87 +67,126 @@ class SmokeTests(TestBase):
     def setUp(self) -> None:
         super().setUp()
 
-    def f_login_successful(self):
-        """Authentication: Login"""
+    def test_01_login_successful(self):
+        print("Page: Login")
+        print("Expected output: User should login successfully")
+        print()
         self.login.f_login_successful()
 
-    def test_dashboard_amounts_displayed(self):
-        """Dashboard: Amounts Display"""
+    def test_02_dashboard_amounts_displayed(self):
+        print("Page: Dashboard")
+        print("Expected output: All amounts should be displayed correctly on the dashboard")
+        print()
         self.dash.test_dashboard_amounts_displayed()
 
-    def test_02_category_tab(self):
-        """Category: Open Category Tab"""
+    def test_03_category_tab(self):
+        print("Page: Category")
+        print("Expected output: Category tab should open successfully")
+        print()
         self.configu.cat_tab()
 
-    def test_03_create_new_category(self):
-        """Category: Create New Category"""
+    def test_04_create_new_category(self):
+        print("Page: Category")
+        print("Expected output: New category should be created successfully")
+        print()
         self.configu.test_create_new_category()
 
-    def test_09_edit_category(self):
-        """Category: Edit Category"""
+    def test_05_edit_category(self):
+        print("Page: Category")
+        print("Expected output: Existing category should be edited successfully")
+        print()
         self.configu.test_edit_category()
 
-    def test_12_delete_category(self):
-        """Category: Delete Category"""
+    def test_06_delete_category(self):
+        print("Page: Category")
+        print("Expected output: Category should be deleted successfully and verified")
+        print()
         self.configu.delete_category_and_verify()
 
-    def test_15_subcategory_tab(self):
-        """Subcategory: Open Subcategory Tab"""
+    def test_07_subcategory_tab(self):
+        print("Page: Subcategory")
+        print("Expected output: Subcategory tab should open successfully")
+        print()
         self.subconfigu.sub_tab()
 
-    def test_16_create_new_subcategory(self):
-        """Subcategory: Create New Subcategory"""
+    def test_08_create_new_subcategory(self):
+        print("Page: Subcategory")
+        print("Expected output: New subcategory should be created successfully")
+        print()
         self.subconfigu.test_create_new_subcategory()
 
-    def test_23_edit_subcategory(self):
-        """Subcategory: Edit Subcategory"""
+    def test_09_edit_subcategory(self):
+        print("Page: Subcategory")
+        print("Expected output: Existing subcategory should be edited successfully")
+        print()
         self.subconfigu.test_edit_subcategory()
 
-    def test_25_delete_subcategory(self):
-        """Subcategory: Delete Subcategory"""
+    def test_10_delete_subcategory(self):
+        print("Page: Subcategory")
+        print("Expected output: Subcategory should be deleted successfully")
+        print()
         self.subconfigu.test_delete_subcategory()
 
-    def test_28_expense_tab(self):
-        """Expense: Open Expense Tab"""
+    def test_11_expense_tab(self):
+        print("Page: Expenses")
+        print("Expected output: Expense tab should open successfully")
+        print()
         self.expenses.expense_tab()
 
-    def test_30_add_income(self):
-        """Expense: Add Income"""
+    def test_12_add_income(self):
+        print("Page: Expenses")
+        print("Expected output: Income should be added successfully")
+        print()
         self.expenses.test_valid_income_add()
 
-    def test_add_expense(self):
-        """Expense: Add Expense"""
+    def test_13_add_expense(self):
+        print("Page: Expenses")
+        print("Expected output: Expense should be added successfully")
+        print()
         self.expenses.test_valid_expense_add()
 
-    def test_40_edit_expense(self):
-        """Expense: Edit Expense"""
+    def test_14_edit_expense(self):
+        print("Page: Expenses")
+        print("Expected output: Existing expense should be edited successfully")
+        print()
         self.expenses.test_expense_edit()
 
-    def test_45_expense_delete(self):
-        """Expense: Delete Expense"""
+    def test_15_delete_expense(self):
+        print("Page: Expenses")
+        print("Expected output: Expense should be deleted successfully")
+        print()
         self.expenses.test_expense_delete()
 
-    def test_47_expense_report(self):
-        """Report: Open Expense Report Tab"""
+    def test_16_expense_report_tab(self):
+        print("Page: Expense Report")
+        print("Expected output: Expense Report tab should open successfully")
+        print()
         self.expreport.exprep_tab()
 
-    def test_50_export_expense_to_excel(self):
-        """Report: Export Expense to Excel"""
+    def test_17_export_expense_to_excel(self):
+        print("Page: Expense Report")
+        print("Expected output: Expense data should be filtered and exported to Excel successfully")
+        print()
         self.expreport.test_03_filter_by_date_range()
         self.expreport.test_04_export_to_excel()
 
-    def test_51_category_ledger(self):
-        """Report: Open Category Ledger Tab"""
+    def test_18_category_ledger_tab(self):
+        print("Page: Category Ledger")
+        print("Expected output: Category Ledger tab should open successfully")
+        print()
         self.category_ledger.catledg_tab()
 
-    def test_54_export_category_ledger_to_excel(self):
-        """Report: Export Category Ledger to Excel"""
+    def test_19_export_category_ledger_to_excel(self):
+        print("Page: Category Ledger")
+        print("Expected output: Category Ledger should be exported to Excel successfully")
+        print()
         self.category_ledger.test_export_to_excel()
 
-    def logout(self):
-        """Authentication: Logout"""
-        self.out.logout()  
-
+    def test_20_logout(self):
+        print("Page: Logout")
+        print("Expected output: User should logout successfully")
+        print()
+        self.out.logout()
 
 if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -158,40 +198,32 @@ if __name__ == "__main__":
      # === Manual Test Suite in Execution Order ===
     suite = unittest.TestSuite()
 
-    suite.addTest(SmokeTests('f_login_successful'))
+    suite.addTest(SmokeTests('test_01_login_successful'))
+    suite.addTest(SmokeTests('test_02_dashboard_amounts_displayed'))
 
-    suite.addTest(SmokeTests('test_dashboard_amounts_displayed'))
+    suite.addTest(SmokeTests('test_03_category_tab'))
+    suite.addTest(SmokeTests('test_04_create_new_category'))
+    suite.addTest(SmokeTests('test_05_edit_category'))
+    suite.addTest(SmokeTests('test_06_delete_category'))
 
-    
-    suite.addTest(SmokeTests('test_02_category_tab'))
-    suite.addTest(SmokeTests('test_03_create_new_category'))
-    suite.addTest(SmokeTests('test_09_edit_category'))
-    suite.addTest(SmokeTests('test_12_delete_category'))
+    suite.addTest(SmokeTests('test_07_subcategory_tab'))
+    suite.addTest(SmokeTests('test_08_create_new_subcategory'))
+    suite.addTest(SmokeTests('test_09_edit_subcategory'))
+    suite.addTest(SmokeTests('test_10_delete_subcategory'))
 
+    suite.addTest(SmokeTests('test_11_expense_tab'))
+    suite.addTest(SmokeTests('test_12_add_income'))
+    suite.addTest(SmokeTests('test_13_add_expense'))
+    suite.addTest(SmokeTests('test_14_edit_expense'))
+    suite.addTest(SmokeTests('test_15_delete_expense'))
 
+    suite.addTest(SmokeTests('test_16_expense_report_tab'))
+    suite.addTest(SmokeTests('test_17_export_expense_to_excel'))
 
-    suite.addTest(SmokeTests('test_15_subcategory_tab'))
-    suite.addTest(SmokeTests('test_16_create_new_subcategory'))
-    suite.addTest(SmokeTests('test_23_edit_subcategory'))
-    suite.addTest(SmokeTests('test_25_delete_subcategory'))
+    suite.addTest(SmokeTests('test_18_category_ledger_tab'))
+    suite.addTest(SmokeTests('test_19_export_category_ledger_to_excel'))
 
-
-
-    suite.addTest(SmokeTests('test_28_expense_tab'))
-    suite.addTest(SmokeTests('test_30_add_income'))
-    suite.addTest(SmokeTests('test_add_expense'))
-    suite.addTest(SmokeTests('test_40_edit_expense'))
-    suite.addTest(SmokeTests('test_45_expense_delete'))
-
-
-
-    suite.addTest(SmokeTests('test_47_expense_report'))
-    suite.addTest(SmokeTests('test_50_export_expense_to_excel'))
-
-
-    suite.addTest(SmokeTests('test_51_category_ledger'))
-    suite.addTest(SmokeTests('test_54_export_category_ledger_to_excel'))
-    suite.addTest(SmokeTests('logout'))
+    suite.addTest(SmokeTests('test_20_logout'))
 
 
     # Run tests with HTML report
@@ -217,6 +249,68 @@ if __name__ == "__main__":
                 full_path = os.path.join(REPORT_DIR, file)
                 print(f"  - {file}")
                 print(f"    Full path: {full_path}")
+        # === Excel report generation ===
+    excel_path = os.path.join(REPORT_DIR, 'Smoketest_Report.xlsx')
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Smoke Test Results"
+
+    # Track time
+    start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    duration = 0  # Set manually if needed
+
+    # Summary
+    failed_tests = {test.test_name.split('.')[-1] for test in result.failures}
+    errored_tests = {test.test_name.split('.')[-1] for test in result.errors}
+    total_tests = result.testsRun
+    passed_tests = total_tests - len(failed_tests) - len(errored_tests)
+
+    # === Summary row ===
+    ws.append(["Start Time", "Duration (s)", "Total", "Pass", "Fail", "Errors"])
+    ws.append([start_time, duration, total_tests, passed_tests, len(failed_tests), len(errored_tests)])
+    ws.append([])
+
+    # === Table header ===
+    ws.append(["Page",  "Test Case","Expected Result", "Status"])
+
+    # === Map test method names to expected output ===
+    test_cases = [
+        ("test_01_login_successful", "Login", "User should login successfully"),
+        ("test_02_dashboard_amounts_displayed", "Dashboard", "All amounts should be displayed correctly on the dashboard"),
+        ("test_03_category_tab", "Category", "Category tab should open successfully"),
+        ("test_04_create_new_category", "Category", "New category should be created successfully"),
+        ("test_05_edit_category", "Category", "Existing category should be edited successfully"),
+        ("test_06_delete_category", "Category", "Category should be deleted successfully and verified"),
+        ("test_07_subcategory_tab", "Subcategory", "Subcategory tab should open successfully"),
+        ("test_08_create_new_subcategory", "Subcategory", "New subcategory should be created successfully"),
+        ("test_09_edit_subcategory", "Subcategory", "Existing subcategory should be edited successfully"),
+        ("test_10_delete_subcategory", "Subcategory", "Subcategory should be deleted successfully"),
+        ("test_11_expense_tab", "Expenses", "Expense tab should open successfully"),
+        ("test_12_add_income", "Expenses", "Income should be added successfully"),
+        ("test_13_add_expense", "Expenses", "Expense should be added successfully"),
+        ("test_14_edit_expense", "Expenses", "Existing expense should be edited successfully"),
+        ("test_15_delete_expense", "Expenses", "Expense should be deleted successfully"),
+        ("test_16_expense_report_tab", "Expense Report", "Expense Report tab should open successfully"),
+        ("test_17_export_expense_to_excel", "Expense Report", "Expense data should be filtered and exported to Excel successfully"),
+        ("test_18_category_ledger_tab", "Category Ledger", "Category Ledger tab should open successfully"),
+        ("test_19_export_category_ledger_to_excel", "Category Ledger", "Category Ledger should be exported to Excel successfully"),
+        ("test_20_logout", "Logout", "User should logout successfully"),
+    ]
+
+    # === Populate Excel rows ===
+    for case_name, page, expected in test_cases:
+        if case_name in failed_tests:
+            status = "Fail"
+        elif case_name in errored_tests:
+            status = "Error"
+        else:
+            status = "Pass"
+        ws.append([page, expected, case_name, status])
+
+    # === Save Excel file ===
+    wb.save(excel_path)
+    print(f"[DEBUG] Excel report saved at: {excel_path}")
+
 
     # === Test summary ===
     print(f"[DEBUG] Test execution completed!")

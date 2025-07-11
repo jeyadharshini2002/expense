@@ -21,6 +21,15 @@ class TestDashboard(BasePage,unittest.TestCase):
         
     def test_something(self):
         self.assertTrue(True)
+
+    def dash_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h3[normalize-space()='Dashboard'])[1]").text
+            assert "Dashboard" in header, "Header text does not contain 'Dashboard'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+     
     def test_dashboard_balance_calculation(self):
         try:
             income_text = self.driver.find_element(By.XPATH, "//h4[contains(text(),'Income')]/following-sibling::h2").text

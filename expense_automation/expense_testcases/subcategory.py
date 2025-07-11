@@ -35,6 +35,15 @@ class SubCategory(BasePage,unittest.TestCase):
         self.click(Locators.SUBCATEGORY_SIDEBAR)
         time.sleep(2)
 
+    def sub_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h4[normalize-space()='Subcategory'])[1]").text
+            assert "Subcategory" in header, "Header text does not contain 'Subcategory'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+ 
+
     def test_create_new_subcategory(self):
         self.click(Locators.SUBCATEGORY_NEW_BUTTON)
         time.sleep(1)

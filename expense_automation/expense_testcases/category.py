@@ -31,11 +31,20 @@ class Category(BasePage,unittest.TestCase):
         fake = Faker()
         self.click(Locators.CATEGORY_SIDEBAR)
         time.sleep(2)
+    
+    def cat_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h4[normalize-space()='Category'])[1]").text
+            assert "Category" in header, "Header text does not contain 'Category'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+    
 
     def test_create_new_category(self):
         self.click(Locators.NEW_CATEGORY_BUTTON)
         time.sleep(2)
-        category_name = f"category {random.randint(100, 999)}"
+        category_name = f"Valid category {random.randint(100, 999)}"
         self.enter_text(Locators.CATEGORY_NAME_INPUT, category_name)
         time.sleep(1)
         self.click(Locators.EXPENSE_RADIO_BUTTON)
@@ -50,7 +59,8 @@ class Category(BasePage,unittest.TestCase):
             self.logger.info("Category created successfully!")
         except TimeoutException:
             self.fail("Category was not saved. 'Category Code' link not found.")
-            
+            self.click(Locators.BACK_CATEGORY)
+            time.sleep(2)
     def test_empty_category_name(self):
         self.click(Locators.NEW_CATEGORY_BUTTON)
         self.enter_text(Locators.CATEGORY_NAME_INPUT, "")

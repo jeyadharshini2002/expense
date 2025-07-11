@@ -34,6 +34,15 @@ class exp_report(BasePage,unittest.TestCase):
     def exprep_tab(self):
         self.click(Locators.EXPENSES_REPORT_SIDEBAR)
         time.sleep(2)
+
+    def exprep_header(self):
+        try:
+            header = self.driver.find_element(By.XPATH, "(//h4[normalize-space()='Expense Report'])[1]").text
+            assert "Expense Report" in header, "Header text does not contain 'Expense Report'"
+            self.logger.info("Header was correctly displayed")
+        except Exception as e:
+            self.fail(f"Header not found: {e}")
+ 
     def test_02_filter_by_month_and_year(self):
         self.dropdown_click(Locators.EXPENSES_MONTHS, 7)
         self.dropdown_click(Locators.EXPENSES_YEAR, 6)

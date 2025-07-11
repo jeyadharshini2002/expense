@@ -32,14 +32,14 @@ class Logout(BasePage, unittest.TestCase):
         Perform logout operation.
         """
         self.logger.info("Performing logout operation.")
-
+        time.sleep(1)
         self.click(Locators.LOGOUT_BT)
         time.sleep(2)  # Wait for logout to complete
         
         self.click(Locators.LOGOUT_CONFIRM_BUTTON)
         time.sleep(2)  # Wait for confirmation to complete
         try:
-            self.driver.find_element(By.XPATH, "(//label[@for='EmailId'])[1]")
+            self.driver.find_element(By.XPATH, "(//button[normalize-space()='Login'])[1]")
             self.logger.info("Logout successful.")
         except Exception as e:
             self.logger.error(f"Logout failed: {e}")
